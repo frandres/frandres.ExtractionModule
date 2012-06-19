@@ -1,0 +1,71 @@
+<Configuration>
+	<UnitRegExp>^(.+?)$</UnitRegExp>
+	<MinimumHitRatio>0</MinimumHitRatio>
+	<FieldDescriptors>
+		<FieldDescriptor>
+			<FieldName>Profesor.Nombre</FieldName>
+			<SpecificRegExps>
+				<SpecificRegExp>Profesor.Nombre:(.*?)!</SpecificRegExp>
+			</SpecificRegExps>
+			<Weight>4</Weight>
+			<isDate>0</isDate>
+		</FieldDescriptor>
+
+		<FieldDescriptor>
+			<FieldName>Cargo.Nombre</FieldName>
+			<SpecificRegExps>
+				<SpecificRegExp>Cedula:(.*?)!</SpecificRegExp>
+			</SpecificRegExps>
+			<Weight>1</Weight>
+			<isDate>0</isDate>
+		</FieldDescriptor>
+		
+		<FieldDescriptor>
+			<FieldName>Cargo.Unidad</FieldName>
+			<SpecificRegExps>
+				<SpecificRegExp>Telefono:(.*?)!</SpecificRegExp>
+			</SpecificRegExps>
+			<Weight>2</Weight>
+			<isDate>0</isDate>
+		</FieldDescriptor>
+		
+		<FieldDescriptor>
+			<FieldName>EsAsignado.fechaAsignacion</FieldName>
+			<SpecificRegExps>
+				<SpecificRegExp>a partir del.*?([0-9-/.]*?)</SpecificRegExp>
+				<SpecificRegExp>.*([0-9-/.]*?)</SpecificRegExp>
+			</SpecificRegExps>
+			<Weight>5</Weight>
+			<isDate>1</isDate>
+		</FieldDescriptor>		
+		
+		<FieldDescriptor>
+			<FieldName>EsAsignado.fechaFinal</FieldName>
+			<SpecificRegExps>
+				<SpecificRegExp>hasta el.*?([0-9-/.]*?)</SpecificRegExp>
+				<SpecificRegExp>.*([0-9-/.]*?)</SpecificRegExp>
+			</SpecificRegExps>
+			<Weight>5</Weight>
+			<isDate>1</isDate>
+		</FieldDescriptor>		
+		
+		<FieldDescriptor>
+			<FieldName>EsAsignado.motivo</FieldName>
+			<SpecificRegExps>
+				<SpecificRegExp>Edad:(.*?)!</SpecificRegExp>
+			</SpecificRegExps>
+			<Weight>5</Weight>
+			<isDate>1</isDate>
+		</FieldDescriptor>		
+		
+		<FieldDescriptor>
+			<FieldName>EsAsignado.calificacion</FieldName>
+			<SpecificRegExps>
+				<SpecificRegExp>Edad:(.*?)!</SpecificRegExp>
+			</SpecificRegExps>
+			<Weight>5</Weight>
+			<isDate>1</isDate>
+		</FieldDescriptor>	
+	</FieldDescriptors>
+
+</Configuration>
