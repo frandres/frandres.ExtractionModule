@@ -25,7 +25,7 @@ public final class TimeoutController {
             /* if somebody interrupts us he knows what he is doing */
         }
         if (task.isAlive()) {
-            task.interrupt();
+            task.suspend();
             throw new TimeoutException();
         }
     }

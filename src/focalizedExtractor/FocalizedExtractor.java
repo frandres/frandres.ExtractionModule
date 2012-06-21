@@ -14,6 +14,8 @@ import java.util.regex.Pattern;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
+import textPreProcessor.files.FileInformation;
+
 public class FocalizedExtractor {
 	
 	static Logger log = Logger.getLogger(FocalizedExtractor.class.getName());
@@ -155,7 +157,7 @@ public class FocalizedExtractor {
 				try{
 					value = matcher.group(1);
 				}catch (IllegalStateException e) {
-					log.log(Level.INFO, "Unit: " + unit + ", no tiene el valor de:" + missingFieldName);
+					//log.log(Level.INFO, "Unit: " + unit + ", no tiene el valor de:" + missingFieldName);
 				}
 			
 			}
@@ -209,7 +211,7 @@ public class FocalizedExtractor {
 		FieldDescriptor dummy = new FieldDescriptor(fieldName);
 		int iPoint = Collections.binarySearch(fieldDescriptors, dummy);
 		if (iPoint>fieldDescriptors.size() || iPoint<0){
-			log.log(Level.INFO, "No se ha encontrado el campo: " + fieldName + "entre los file descriptors");
+			//log.log(Level.INFO, "No se ha encontrado el campo: " + fieldName + "entre los file descriptors");
 			return null;
 		}
 		
@@ -218,7 +220,7 @@ public class FocalizedExtractor {
 		if (possibleMatch.getFieldName().compareTo(fieldName)==0){
 			return possibleMatch;
 		}else {
-			log.log(Level.INFO, "No se ha encontrado el campo: " + fieldName + "entre los file descriptors");
+			//log.log(Level.INFO, "No se ha encontrado el campo: " + fieldName + "entre los file descriptors");
 			return null;
 		}				
 	}
@@ -264,23 +266,50 @@ public class FocalizedExtractor {
 	public static void main(String[] args) {
 		String configFilePath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/extractionConfigFile.xml";
 		
-		int testCase = 1;
+		TestSet designacionesTestSet = new TestSet(getDesignacionesTestSet());
 		
-		ExtractionContext extContext = TestSet.getContext(testCase);
+		double  correctas= 0;
 		
-		FocalizedExtractor fExt = new FocalizedExtractor(configFilePath, extContext);
-		String result = fExt.findFieldValue(TestSet.getMissingFieldName(testCase));
+		int numPruebas = designacionesTestSet.getNumTests();
+		double total = numPruebas;
 		
-		if (result!= null && result.compareTo(TestSet.getCorrectAnswer(testCase))==0){
-			System.out.println("Prueba número: " + testCase + " correcta:" + result);
-			 
-		} else{
-			System.out.println("Resultado correcto:" + TestSet.getCorrectAnswer(testCase));
-			System.out.println("Resultado obtenido:" + result);
+		for (int testCaseNum = 0; testCaseNum < designacionesTestSet.getNumTests(); testCaseNum++) {
+			ExtractionContext extContext = designacionesTestSet.getContext(testCaseNum);
+			
+			FocalizedExtractor fExt = new FocalizedExtractor(configFilePath, extContext);
+			String result = fExt.findFieldValue(designacionesTestSet.getMissingFieldName(testCaseNum));
+			
+			if (result!= null && result.compareTo(designacionesTestSet.getCorrectAnswer(testCaseNum))==0){
+				System.out.println("Prueba número: " + testCaseNum + " correcta: " + designacionesTestSet.getMissingFieldName(testCaseNum));
+				correctas++; 
+			} else{
+				System.out.println("Prueba número: " + testCaseNum + " incorrecta: " + designacionesTestSet.getMissingFieldName(testCaseNum));
+				System.out.println("Resultado correcto:" + designacionesTestSet.getCorrectAnswer(testCaseNum));
+				System.out.println("Resultado obtenido:" + result);
+			}
+			
+			System.out.println("");
 		}
+		
+	    System.out.println("");
+		System.out.println("Tasa de acierto: " + correctas/total);
+		
+		
 		
 	}
 	
+	public static List<ExtractionContext> getDesignacionesTestSet(){
+		List<ExtractionContext> testSet = new ArrayList<ExtractionContext>();
+		
+		List<FieldInformation> fieldInfo = new ArrayList<FieldInformation>();
+		fieldInfo.add(new FieldInformation("Profesor.Nombre", "Carolina Payares"));
+		fieldInfo.add(new FieldInformation("EsAsignado.calificacion", "Jefa del Laboratorio \"E\""));
+		fieldInfo.add(new FieldInformation("EsAsignado.fechaAsignacion", "15-1-2002"));
+		
+		testSet.add(new ExtractionContext(fieldInfo));
+		return testSet;
+	}
+//	Prof. Carolina Payares, Jefa del Laboratorio "E" , a partir del 15-1-2002.
 //		String configFilePath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/extractionConfigFile.xml";
 //		List<FieldInformation> fieldsInformation = new ArrayList<FieldInformation>();
 //		

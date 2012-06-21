@@ -23,6 +23,16 @@
 				<SpecificRegExp>T\u00e9cnico Superior.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
 				<SpecificRegExp>Dr.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
 				<SpecificRegExp>Mgs.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
+				<SpecificRegExp>Profesora*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
+				<SpecificRegExp>Profesora*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
+				<SpecificRegExp>Licenciad[oa].*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
+				<SpecificRegExp>Señora*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
+				<SpecificRegExp>Arquitect[oa]*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
+				<SpecificRegExp>Ingenier[oa]*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
+				<SpecificRegExp>Economist[oa]*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
+				<SpecificRegExp>Abogad[oa]*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
+				<SpecificRegExp>Sociólog[oa]*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
+			
 			</SpecificRegExps>
 			<Weight>4</Weight>
 			<isDate>0</isDate>
@@ -31,12 +41,12 @@
 		<FieldDescriptor>
 			<FieldName>EsAsignado.fechaAsignacion</FieldName>
 			<SpecificRegExps>
-				<SpecificRegExp>a\s+partir\s+del\s+([0-9\-/.]?).*</SpecificRegExp>
-				<SpecificRegExp>por\s+el\s+período\s+([0-9\-/\.]*).*</SpecificRegExp>
-				<SpecificRegExp>del\s+([0-9][0-9\-/\.]*).*</SpecificRegExp>
-				<SpecificRegExp>desde\s+el\s+([0-9][0-9\-/\.]*).*</SpecificRegExp>
-				<SpecificRegExp>desde\s+([0-9][0-9\-/\.]*).*</SpecificRegExp>
-				<SpecificRegExp>\s+entre\s+el\s+([0-9][0-9\-/\.]*).*</SpecificRegExp> 
+				<SpecificRegExp>a\s+partir\s+del\s+([0-9\-/.]?[0-9]).*</SpecificRegExp>
+				<SpecificRegExp>por\s+el\s+período\s+([0-9\-/\.]*[0-9]).*</SpecificRegExp>
+				<SpecificRegExp>del\s+([0-9][0-9\-/\.]*[0-9]).*</SpecificRegExp>
+				<SpecificRegExp>desde\s+el\s+([0-9][0-9\-/\.]*[0-9]).*</SpecificRegExp>
+				<SpecificRegExp>desde\s+([0-9][0-9\-/\.]*[0-9]).*</SpecificRegExp>
+				<SpecificRegExp>\s+entre\s+el\s+([0-9][0-9\-/\.]*[0-9]).*</SpecificRegExp> 
 			</SpecificRegExps>
 			<Weight>5</Weight>
 			<isDate>1</isDate>
@@ -45,8 +55,8 @@
 		<FieldDescriptor>
 			<FieldName>EsAsignado.fechaFinal</FieldName>
 			<SpecificRegExps>
-				<SpecificRegExp>hasta\s+el\s+([0-9\-/.]*?)</SpecificRegExp>
-				<SpecificRegExp>al\s+([0-9][0-9\-/\.]*).*</SpecificRegExp>
+				<SpecificRegExp>hasta\s+el\s+([0-9\-/.]*?[0-9])</SpecificRegExp>
+				<SpecificRegExp>al\s+([0-9][0-9\-/\.]*[0-9]).*</SpecificRegExp>
 			</SpecificRegExps>
 			<Weight>5</Weight>
 			<isDate>1</isDate>

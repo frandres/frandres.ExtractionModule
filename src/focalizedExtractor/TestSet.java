@@ -1,59 +1,68 @@
 package focalizedExtractor;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class TestSet {
+	
+	private int numFields;
+	private List<ExtractionContext> testCases;
+	
+	
 
-	public static ExtractionContext getContext(int num){
-		List<FieldInformation> infoCampos = new ArrayList<FieldInformation>();
+	public TestSet(List<ExtractionContext> testCases) {
+		super();
 		
-		ExtractionContext eContext = new ExtractionContext(infoCampos);
+		this.testCases = testCases;
 		
-		switch (num) {
-		case 0:
-			infoCampos.add(new FieldInformation("EsAsignado.calificacion", " Jefa del Laboratorio \"E\""));
-			infoCampos.add(new FieldInformation("EsAsignado.fechaAsignacion", "15-1-2002"));
-			break;
-		case 1:
-			infoCampos.add(new FieldInformation("Profesor.Nombre", "Alexander Bueno"));
-			infoCampos.add(new FieldInformation("EsAsignado.calificacion", "Director Encargado del Núcleo del Litoral"));
-			break;
-
-		default:
-			break;
+		if (testCases!= null && testCases.size()>0){
+			this.numFields = testCases.get(0).getFieldsInformation().size();
+		} else{
+			System.out.println("Lista vacia");
 		}
 		
-		return eContext;
 	}
 	
-	public static String getMissingFieldName(int num){
-		switch (num) {
-		case 0:
-			return "Profesor.Nombre";
-		case 1:
-			return "EsAsignado.fechaAsignacion";
+	
+	public int getNumFields() {
+		return numFields;
+	}
 
-		default:
-			break;
-		}
-		
-		return null;
+
+	public List<ExtractionContext> getTestCases() {
+		return testCases;
+	}
+
+
+	private int getContextNum(int num){
+		return num/numFields;
 	}
 	
-	public static String getCorrectAnswer(int num){
-		switch (num) {
-		case 0:
-			return "Carolina Payares";
-
-		case 1:
-			return "4-11-";
-
-		default:
-			break;
-		}
+	private int getFieldNum(int num){
+		return num%numFields;
+	}
+	
+	public ExtractionContext getContext(int num){
 		
-		return null;
+		List<FieldInformation> fInfo = new ArrayList<FieldInformation>(getTestCases().get(getContextNum(num)).getFieldsInformation());
+		
+		fInfo.remove(getFieldNum(num));
+		
+		return new ExtractionContext(fInfo);
+	}
+	
+	public String getMissingFieldName(int num){
+		return getTestCases().get(getContextNum(num)).getFieldsInformation().get(getFieldNum(num)).getFieldName();
+	}
+	
+	public String getCorrectAnswer(int num){
+		return getTestCases().get(getContextNum(num)).getFieldsInformation().get(getFieldNum(num)).getFieldValue();
+	}
+
+
+	public int getNumTests() {
+		return numFields*testCases.size();
 	}
 	
 }

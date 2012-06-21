@@ -8,8 +8,12 @@
         <RegExps>
             <RegExp>
         		<Priority>1</Priority>
-        		<String>.*(?:[Ii][Nn][Ff][Oo][Rr][Mm][Ee] [Dd][Ee][Ll] [Rr][Ee][Cc][Tt][Oo][Rr]).*?([Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][Oo\u00f3][Nn](?:[Ee][Ss]){0,1}.*?)[^0-9 ][23(?:IV)(?:III)(?:II)(?:donaci)][\.\t].*</String>
-        	</RegExp>            	
+        		<String>.*(?:[Ii][Nn][Ff][Oo][Rr][Mm][Ee] [Dd][Ee][Ll] [Rr][Ee][Cc][Tt][Oo][Rr]).*?([Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][Oo\u00f3][Nn](?:[Ee][Ss]){0,1}.*?)(?:donaci)].*</String>
+        	</RegExp>
+        	<RegExp>
+        		<Priority>2</Priority>
+        		<String>.*(?:[Ii][Nn][Ff][Oo][Rr][Mm][Ee] [Dd][Ee][Ll] [Rr][Ee][Cc][Tt][Oo][Rr]).*?([Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][Oo\u00f3][Nn](?:[Ee][Ss]){0,1}.*?)[^0-9 ][23(?:IV)(?:III)(?:II)][\.\t].*</String>
+        	</RegExp>        	
         </RegExps>
 
 
@@ -17,4 +21,6 @@
         <outputExtension>.txt</outputExtension>   
         
 </Filesource>
-</Filesources>   
+</Filesources>  
+
+<!-- <String>.*(?:[Ii][Nn][Ff][Oo][Rr][Mm][Ee] [Dd][Ee][Ll] [Rr][Ee][Cc][Tt][Oo][Rr]).*?([Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][Oo\u00f3][Nn](?:[Ee][Ss]){0,1}.*?)[^0-9 ][23(?:IV)(?:III)(?:II)(?:donaci)][\.\t].*</String> --> 

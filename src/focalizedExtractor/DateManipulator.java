@@ -35,7 +35,7 @@ public class DateManipulator {
 		if (format<0){
 			ArrayList<String> list = new ArrayList<String>();
 			list.add(date);
-			log.log(Level.INFO, "Did not match anything");
+			//log.log(Level.INFO, "Did not match anything");
 			return list;
 		}
 		return getFormats(format);
