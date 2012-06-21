@@ -118,16 +118,17 @@ public class XMLReader {
 		
 		List<String> regExps = new ArrayList<String>();
 		
-		//get a nodelist of <employee> elements
-		NodeList nl = filSEl.getElementsByTagName("SpecificRegExps");
+		//get a nodelist of <employee> elements\
+		
+		NodeList nl = filSEl.getElementsByTagName("SpecificRegExp");
+		
 		if(nl != null && nl.getLength() > 0) {
 			for(int i = 0 ; i < nl.getLength();i++) {
-				
 				//get the employee element
 				Element el = (Element)nl.item(i);
 
 				//add it to list
-				regExps.add(getTextValue(el,"SpecificRegExp"));
+				regExps.add(el.getTextContent());
 			}
 		}
 		

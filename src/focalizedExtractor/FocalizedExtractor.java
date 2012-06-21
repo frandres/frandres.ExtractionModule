@@ -3,12 +3,8 @@ package focalizedExtractor;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -45,6 +41,11 @@ public class FocalizedExtractor {
 		// Read the minimumHitRatio
 		
 		minimumHitRadio = xmlReader.getMinimumHitRatio();
+		
+		if (eContext == null){
+			log.log(Level.FATAL, "No se pudo cargar el contexto");
+			return;
+		}
 		
 		this.eContext=eContext;
 		//this.documents = documents;
@@ -117,7 +118,10 @@ public class FocalizedExtractor {
 		String fieldValue;
 		
 		while (!pQueue.isEmpty()){
-			unit = pQueue.poll().getUnit();
+			UnitHit uHit = pQueue.poll();
+			unit = uHit.getUnit();
+			log.log(Level.INFO, "Unit: " + unit + " has weight: " + uHit.getHitMeasure());
+			
 			if ((fieldValue=extractFieldValue(missingFieldName,unit))!=null){
 				return fieldValue;
 			}
@@ -139,9 +143,8 @@ public class FocalizedExtractor {
 		
 		for (Iterator<String> iterator = specificRegExps.iterator(); iterator.hasNext();) {
 			
+			
 			String regExp = iterator.next();
-		
-			System.out.println(regExp);
 			Pattern pattern = Pattern.compile(regExp,
 	                					  		Pattern.DOTALL);
 		
@@ -196,7 +199,7 @@ public class FocalizedExtractor {
 			weight = hitMeasure/maxHitMeasure;
 		}
 		
-		log.log(Level.INFO, "Unit: " + unit + " has weight: " + weight);
+		//log.log(Level.INFO, "Unit: " + unit + " has weight: " + weight);
 		
 		return weight;
 		
@@ -260,15 +263,22 @@ public class FocalizedExtractor {
 	
 	public static void main(String[] args) {
 		String configFilePath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/extractionConfigFile.xml";
-		List<FieldInformation> fieldsInformation = new ArrayList<FieldInformation>();
 		
-		fieldsInformation.add(new FieldInformation("EsAsignado.calificacion", " Jefa del Laboratorio \"E\""));
-		fieldsInformation.add(new FieldInformation("EsAsignado.fechaAsignacion", "15-1-2002"));
+		int testCase = 1;
 		
-		ExtractionContext extContext = new ExtractionContext(fieldsInformation);
+		ExtractionContext extContext = TestSet.getContext(testCase);
 		
 		FocalizedExtractor fExt = new FocalizedExtractor(configFilePath, extContext);
-		System.out.println("Valor:" + fExt.findFieldValue("Profesor.Nombre"));
+		String result = fExt.findFieldValue(TestSet.getMissingFieldName(testCase));
+		
+		if (result!= null && result.compareTo(TestSet.getCorrectAnswer(testCase))==0){
+			System.out.println("Prueba número: " + testCase + " correcta:" + result);
+			 
+		} else{
+			System.out.println("Resultado correcto:" + TestSet.getCorrectAnswer(testCase));
+			System.out.println("Resultado obtenido:" + result);
+		}
+		
 	}
 	
 //		String configFilePath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/extractionConfigFile.xml";
