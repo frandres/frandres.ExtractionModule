@@ -1,8 +1,11 @@
-package focalizedExtractor;
+package auxiliary;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import focalizedExtractor.ExtractionContext;
+import focalizedExtractor.FieldInformation;
 
 public class TestSet {
 	

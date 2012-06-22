@@ -14,6 +14,9 @@ import java.util.regex.Pattern;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
+import auxiliary.TestGenerator;
+import auxiliary.TestSet;
+
 import textPreProcessor.files.FileInformation;
 
 public class FocalizedExtractor {
@@ -266,7 +269,8 @@ public class FocalizedExtractor {
 	public static void main(String[] args) {
 		String configFilePath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/extractionConfigFile.xml";
 		
-		TestSet designacionesTestSet = new TestSet(getDesignacionesTestSet());
+		TestGenerator testGen = new TestGenerator("/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/testCases");
+		TestSet designacionesTestSet = new TestSet(testGen.getFieldIinfos());
 		
 		double  correctas= 0;
 		

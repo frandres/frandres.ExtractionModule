@@ -11,10 +11,10 @@ public class FieldInformation implements Comparable<FieldInformation>{
 		this.fieldValue = fieldValue;
 	}
 	
-	protected String getFieldName() {
+	public String getFieldName() {
 		return fieldName;
 	}
-	protected String getFieldValue() {
+	public String getFieldValue() {
 		return fieldValue;
 	}
 

@@ -23,15 +23,15 @@
 				<SpecificRegExp>T\u00e9cnico Superior.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
 				<SpecificRegExp>Dr.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
 				<SpecificRegExp>Mgs.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Profesora*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
-				<SpecificRegExp>Profesora*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
-				<SpecificRegExp>Licenciad[oa].*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
-				<SpecificRegExp>Señora*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
-				<SpecificRegExp>Arquitect[oa]*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
-				<SpecificRegExp>Ingenier[oa]*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
-				<SpecificRegExp>Economist[oa]*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
-				<SpecificRegExp>Abogad[oa]*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
-				<SpecificRegExp>Sociólog[oa]*.*(\w+[a-zA-Z \.]*.*</SpecificRegExp>
+				<SpecificRegExp>Profesora*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
+				<SpecificRegExp>Profesora*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
+				<SpecificRegExp>Licenciad[oa].*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
+				<SpecificRegExp>Señora*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
+				<SpecificRegExp>Arquitect[oa]*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
+				<SpecificRegExp>Ingenier[oa]*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
+				<SpecificRegExp>Economist[oa]*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
+				<SpecificRegExp>Abogad[oa]*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
+				<SpecificRegExp>Sociólog[oa]*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
 			
 			</SpecificRegExps>
 			<Weight>4</Weight>
