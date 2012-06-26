@@ -1,38 +1,36 @@
 <Configuration>
 	<UnitRegExp>^(.+?)$</UnitRegExp>
 	<MinimumHitRatio>0</MinimumHitRatio>
-	<DocumentsFilePath>/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/testSet/</DocumentsFilePath>
+	<DocumentsFilePath>/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/preProcessedDocuments/</DocumentsFilePath>
 	<FieldDescriptors>
 		<FieldDescriptor>
 			<FieldName>Profesor.Nombre</FieldName>
 			<SpecificRegExps>
-				<SpecificRegExp>Prof.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>TSU.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Lic.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Se\u00f1or.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Arq.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Ing.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Sr.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Econ.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Sra.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Porf.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Abog.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Soco.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Soc.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Profa.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>T\u00e9cnico Superior.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Dr.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Mgs.*?(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Profesora*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Profesora*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Licenciad[oa].*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Señora*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Arquitect[oa]*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Ingenier[oa]*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Economist[oa]*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Abogad[oa]*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-				<SpecificRegExp>Sociólog[oa]*.*(\w+[a-zA-Z \.]*).*</SpecificRegExp>
-			
+				<SpecificRegExp>([Pp]rof.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>(TSU.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Ll]ic.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Ss]e\u00f1or.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Aa]rq.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Ii]ng.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>(Sr.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Ee]con.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>(Sra.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Pp]orf.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Aa]bog.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Ss]oco.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Ss]oc.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Pp]rofa.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Tt]\u00e9cnico [Ss]uperior.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>(Dr.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>(Mgs.*?\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Pp]rofesora*.*\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Ll]icenciad[oa].*\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Ss]eñora*.*\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Aa]rquitect[oa]*.*\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Ii]ngenier[oa]*.*\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Ec]conomist[oa]*.*\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Aa]bogad[oa]*.*\w+[a-zA-Z \.]*),.*</SpecificRegExp>
+				<SpecificRegExp>([Ss]ociólog[oa]*.*\w+[a-zA-Z \.]*),.*</SpecificRegExp>			
 			</SpecificRegExps>
 			<Weight>4</Weight>
 			<isDate>0</isDate>
@@ -55,7 +53,7 @@
 		<FieldDescriptor>
 			<FieldName>EsAsignado.fechaFinal</FieldName>
 			<SpecificRegExps>
-				<SpecificRegExp>hasta\s+el\s+([0-9\-/.]*?[0-9])</SpecificRegExp>
+				<SpecificRegExp>hasta\s+el\s+([0-9\-/.]*?[0-9]).*</SpecificRegExp>
 				<SpecificRegExp>al\s+([0-9][0-9\-/\.]*[0-9]).*</SpecificRegExp>
 			</SpecificRegExps>
 			<Weight>5</Weight>
@@ -66,6 +64,7 @@
 			<FieldName>EsAsignado.motivo</FieldName>
 			<SpecificRegExps>
 				<SpecificRegExp>(por motivo .*?)$</SpecificRegExp>
+				<SpecificRegExp>(con motivo .*?)$</SpecificRegExp>
 				<SpecificRegExp>(por .*?)$</SpecificRegExp>
 				<SpecificRegExp>(en sustituci\u00f3n.*?)$</SpecificRegExp>
 			</SpecificRegExps>
@@ -76,7 +75,22 @@
 		<FieldDescriptor>
 			<FieldName>EsAsignado.calificacion</FieldName>
 			<SpecificRegExps>
-				<SpecificRegExp>Jefe(.*?)</SpecificRegExp>
+                <SpecificRegExp>(Jef.*),.*</SpecificRegExp>
+				<SpecificRegExp>(Coordinador.*),.*</SpecificRegExp>
+				<SpecificRegExp>(Director.*),.*</SpecificRegExp>
+				<SpecificRegExp>(Responsable.*),.*</SpecificRegExp>
+				<SpecificRegExp>(Asistent.*),.*</SpecificRegExp>
+				<SpecificRegExp>([Ss]ub-{0,1}[Dd]irect.*),.*</SpecificRegExp>
+				<SpecificRegExp>(Decan.*),.*</SpecificRegExp>
+
+
+	            <SpecificRegExp>(Jef.*)[,(?:a\s+partir\s+del\s)(?:desde)(?:hasta)(?:por motivo)(?:en sustitu)].*</SpecificRegExp>
+				<SpecificRegExp>(Coordinador.*)[,(?:a\s+partir\s+del\s)(?:desde)(?:hasta)(?:por motivo)(?:en sustitu)].*</SpecificRegExp>
+				<SpecificRegExp>(Director.*)[,(?:a\s+partir\s+del\s)(?:desde)(?:hasta)(?:por motivo)(?:en sustitu)].*</SpecificRegExp>
+				<SpecificRegExp>(Responsable.*)[,(?:a\s+partir\s+del\s)(?:desde)(?:hasta)(?:por motivo)(?:en sustitu)].*</SpecificRegExp>
+				<SpecificRegExp>(Asistent.*)[,(?:a\s+partir\s+del\s)(?:desde)(?:hasta)(?:por motivo)(?:en sustitu)].*</SpecificRegExp>
+				<SpecificRegExp>([Ss]ub-{0,1}[Dd]irect.*)[,(?:a\s+partir\s+del\s)(?:desde)(?:hasta)(?:por motivo)(?:en sustitu)].*</SpecificRegExp>
+				<SpecificRegExp>(Decan.*)[,(?:a\s+partir\s+del\s)(?:desde)(?:hasta)(?:por motivo)(?:en sustitu)].*</SpecificRegExp>		
 			</SpecificRegExps>
 			<Weight>5</Weight>
 			<isDate>0</isDate>

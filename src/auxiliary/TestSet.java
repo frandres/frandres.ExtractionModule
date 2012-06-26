@@ -6,6 +6,7 @@ import java.util.List;
 
 import focalizedExtractor.ExtractionContext;
 import focalizedExtractor.FieldInformation;
+import focalizedExtractor.FocalizedExtractor;
 
 public class TestSet {
 	
@@ -66,6 +67,47 @@ public class TestSet {
 
 	public int getNumTests() {
 		return numFields*testCases.size();
+	}
+
+
+	public void runTest(String configFilePath) {
+		double  correctas[] = new double[getNumFields()];
+		
+		for (int i = 0; i < correctas.length; i++) {
+			correctas[i]=0;
+		}
+		int numPruebas = getNumTests();
+		double total = numPruebas;
+		
+		for (int testCaseNum = 0; testCaseNum < getNumTests(); testCaseNum++) {
+			ExtractionContext extContext = getContext(testCaseNum);
+			
+			FocalizedExtractor fExt = new FocalizedExtractor(configFilePath, extContext);
+			String result = fExt.findFieldValue(getMissingFieldName(testCaseNum));
+			
+			if ((result!= null && result.compareTo(getCorrectAnswer(testCaseNum))==0)
+			  ||(result== null) && getCorrectAnswer(testCaseNum).compareTo("")==0){
+				System.out.println("Prueba número: " + testCaseNum + " correcta: " + getMissingFieldName(testCaseNum));
+				correctas[testCaseNum%getNumFields()]++; 
+			} else{
+				System.out.println("Prueba número: " + testCaseNum + " incorrecta: " + getMissingFieldName(testCaseNum));
+				System.out.println("Resultado correcto:" + getCorrectAnswer(testCaseNum));
+				System.out.println("Resultado obtenido:" + result);
+			}
+			
+			System.out.println("");
+		}
+		
+	    System.out.println("RESULTS: ");
+	    System.out.println("");
+	    
+	    for (int i = 0; i < correctas.length; i++) {
+	    	System.out.println("Field: " + getMissingFieldName(i)) ;
+	    	System.out.println(" Tasa de acierto: " + correctas[i]*getNumFields()*100/total);
+	    	System.out.println("");
+		}
+		
+		
 	}
 	
 }

@@ -272,31 +272,9 @@ public class FocalizedExtractor {
 		TestGenerator testGen = new TestGenerator("/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/testCases");
 		TestSet designacionesTestSet = new TestSet(testGen.getFieldIinfos());
 		
-		double  correctas= 0;
+		designacionesTestSet.runTest(configFilePath);
 		
-		int numPruebas = designacionesTestSet.getNumTests();
-		double total = numPruebas;
 		
-		for (int testCaseNum = 0; testCaseNum < designacionesTestSet.getNumTests(); testCaseNum++) {
-			ExtractionContext extContext = designacionesTestSet.getContext(testCaseNum);
-			
-			FocalizedExtractor fExt = new FocalizedExtractor(configFilePath, extContext);
-			String result = fExt.findFieldValue(designacionesTestSet.getMissingFieldName(testCaseNum));
-			
-			if (result!= null && result.compareTo(designacionesTestSet.getCorrectAnswer(testCaseNum))==0){
-				System.out.println("Prueba número: " + testCaseNum + " correcta: " + designacionesTestSet.getMissingFieldName(testCaseNum));
-				correctas++; 
-			} else{
-				System.out.println("Prueba número: " + testCaseNum + " incorrecta: " + designacionesTestSet.getMissingFieldName(testCaseNum));
-				System.out.println("Resultado correcto:" + designacionesTestSet.getCorrectAnswer(testCaseNum));
-				System.out.println("Resultado obtenido:" + result);
-			}
-			
-			System.out.println("");
-		}
-		
-	    System.out.println("");
-		System.out.println("Tasa de acierto: " + correctas/total);
 		
 		
 		
