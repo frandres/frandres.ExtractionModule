@@ -114,7 +114,7 @@ public class FocalizedExtractor {
 			unit = iterator.next();
 			
 			double hitM = calculateHitMeasure(unit);
-			if (hitM>minimumHitRadio){
+			if (hitM>=minimumHitRadio){
 				pQueue.add(new UnitHit(hitM,unit));
 			}
 			
@@ -269,41 +269,14 @@ public class FocalizedExtractor {
 	public static void main(String[] args) {
 		String configFilePath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/extractionConfigFile.xml";
 		
-		TestGenerator testGen = new TestGenerator("/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/testCases");
+		TestGenerator testGen = new TestGenerator("/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/trainingCases");
 		TestSet designacionesTestSet = new TestSet(testGen.getFieldIinfos());
 		
 		designacionesTestSet.runTest(configFilePath);
-		
-		
-		
-		
+	
 		
 	}
 	
-	public static List<ExtractionContext> getDesignacionesTestSet(){
-		List<ExtractionContext> testSet = new ArrayList<ExtractionContext>();
-		
-		List<FieldInformation> fieldInfo = new ArrayList<FieldInformation>();
-		fieldInfo.add(new FieldInformation("Profesor.Nombre", "Carolina Payares"));
-		fieldInfo.add(new FieldInformation("EsAsignado.calificacion", "Jefa del Laboratorio \"E\""));
-		fieldInfo.add(new FieldInformation("EsAsignado.fechaAsignacion", "15-1-2002"));
-		
-		testSet.add(new ExtractionContext(fieldInfo));
-		return testSet;
-	}
-//	Prof. Carolina Payares, Jefa del Laboratorio "E" , a partir del 15-1-2002.
-//		String configFilePath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/extractionConfigFile.xml";
-//		List<FieldInformation> fieldsInformation = new ArrayList<FieldInformation>();
-//		
-//		fieldsInformation.add(new FieldInformation("Nombre", "Carolina Payares"));
-//		fieldsInformation.add(new FieldInformation("Edad", "23"));
-//		fieldsInformation.add(new FieldInformation("Telefono", "44"));
-//		fieldsInformation.add(new FieldInformation("FechaNacimiento", "15.09.1988"));
-//		
-//		ExtractionContext extContext = new ExtractionContext(fieldsInformation);
-//		
-//		FocalizedExtractor fExt = new FocalizedExtractor(configFilePath, extContext);
-//		System.out.println("Valor:" + fExt.findFieldValue("Cedula"));
-//	}
+	
 	
 }

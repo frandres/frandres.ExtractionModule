@@ -3,6 +3,7 @@ package focalizedExtractor;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -116,6 +117,8 @@ public class XMLReader {
 	private List<String> getSpecificRegExps (Element filSEl){
 		//SpecificRegExp
 		
+		PriorityQueue<RegExpWithPriority> pQueue = new PriorityQueue<RegExpWithPriority>();
+		
 		List<String> regExps = new ArrayList<String>();
 		
 		//get a nodelist of <employee> elements\
@@ -128,10 +131,15 @@ public class XMLReader {
 				Element el = (Element)nl.item(i);
 
 				//add it to list
-				regExps.add(el.getTextContent());
+				pQueue.add(new RegExpWithPriority(Double.parseDouble(el.getAttribute("priority")),
+												  el.getTextContent()));
 			}
 		}
 		
+		while (!pQueue.isEmpty()){
+			regExps.add(pQueue.poll().getRegExp());
+			
+		}
 		return regExps;
 	}
 	/**
@@ -149,6 +157,7 @@ public class XMLReader {
 		if(nl != null && nl.getLength() > 0) {
 			Element el = (Element)nl.item(0);
 			textVal = el.getFirstChild().getNodeValue();
+			
 		}
 
 		return textVal;
@@ -172,4 +181,6 @@ public class XMLReader {
 	}
 
 }
+
+
 	

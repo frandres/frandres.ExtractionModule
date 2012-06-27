@@ -52,7 +52,7 @@ public class DateManipulator {
 			dat = dFormat.parse(date);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
-			log.log(Level.ERROR, "Could not parse date");
+			//log.log(Level.ERROR, "Could not parse date");
 			return list;
 		}
 		
