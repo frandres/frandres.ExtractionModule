@@ -269,9 +269,9 @@ public class FocalizedExtractor {
 	public static void main(String[] args) {
 		String configFilePath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/extractionConfigFile.xml";
 		
-		TestGenerator testGen = new TestGenerator("/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/trainingCases");
+		TestGenerator testGen = new TestGenerator("/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/testCases");
 		TestSet designacionesTestSet = new TestSet(testGen.getFieldIinfos());
-		
+
 		designacionesTestSet.runTest(configFilePath);
 	
 		

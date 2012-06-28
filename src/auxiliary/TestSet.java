@@ -112,6 +112,18 @@ public class TestSet {
 		
 	}
 	
+	private String replaceLastPunctuationSigns(String orig){
+		if (orig.endsWith(",")){
+			orig= orig.substring(0,orig.lastIndexOf(","));
+		}
+		
+		if (orig.endsWith(".")){
+			orig= orig.substring(0,orig.lastIndexOf("."));
+		}
+		
+		return orig;
+	}
+	
 	private boolean evaluateTest(String correct, String answer){
 
 		if (answer == null){
@@ -123,8 +135,14 @@ public class TestSet {
 		correct = correct.replace('”','"');
 		answer = answer.replace('”','"');
 		
+		if (answer.endsWith(",")){
+			answer= answer.substring(0,answer.lastIndexOf(","));
+		}
 		correct = correct.trim();
 		answer = answer.trim();
+		
+		correct = replaceLastPunctuationSigns(correct);
+		answer = replaceLastPunctuationSigns(answer);
 		
 		return (answer.compareTo(correct)==0); 
 	}

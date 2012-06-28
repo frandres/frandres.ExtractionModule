@@ -5,10 +5,10 @@ EsAsignado.motivo|
 EsAsignado.calificacion|Jefe Encargado del Departamento de Filosofía
 ---
 Profesor.Nombre|Prof. Richard Rivas
-EsAsignado.fechaAsignacion|15-4-2003
+EsAsignado.fechaAsignacion|15-6-04
 EsAsignado.fechaFinal|
 EsAsignado.motivo|
-EsAsignado.calificacion|Coordinador de Cursos en Cooperación con la Industria
+EsAsignado.calificacion|Coordinador de Cooperación Técnica y Desarrollo Social adscrito al Decanato de Extensión
 ---
 Profesor.Nombre|Prof. Lourdes Sifontes Greco
 EsAsignado.fechaAsignacion|1-4-2003
@@ -60,8 +60,8 @@ EsAsignado.calificacion|Director de la División de Ciencias Biológicas
 ---
 Profesor.Nombre|Prof. Susey Pérez
 EsAsignado.fechaAsignacion|15-04-2010
-EsAsignado.fechaFinal|en sustitución de la profesora  Evelyn Lobo
-EsAsignado.motivo|
+EsAsignado.fechaFinal|
+EsAsignado.motivo|en sustitución de la profesora  Evelyn Lobo
 EsAsignado.calificacion|Coordinadora encargada de Administración del Turismo, Hotelería y Hospitalidad
 ---
 Profesor.Nombre|Prof.  Mariana Suárez
@@ -335,7 +335,7 @@ EsAsignado.motivo|en sustitución del Prof. Eduardo Klein.
 EsAsignado.calificacion|Jefe del Dpto. de Estudios Ambientales
 ---
 Profesor.Nombre|Lic. Giovanna Di Bella
-EsAsignado.fechaAsignacion|a partir del 01-07-2008
+EsAsignado.fechaAsignacion|01-07-2008
 EsAsignado.fechaFinal|
 EsAsignado.motivo|
 EsAsignado.calificacion|Asistente del Oidor Académico
@@ -383,7 +383,7 @@ EsAsignado.motivo|en sustitución del profesor Mario Grimau.
 EsAsignado.calificacion|Jefe del Departamento de Ciencia de los Materiales
 ---
 Profesor.Nombre|Prof. Luís Emilio Pacheco
-EsAsignado.fechaAsignacion|a partir del 1-1-2009
+EsAsignado.fechaAsignacion|1-1-2009
 EsAsignado.fechaFinal|
 EsAsignado.motivo|en sustitución del profesor Tomás Cervilla.
 EsAsignado.calificacion|Jefe del Departamento de Diseño, Arquitectura y Artes Plásticas
@@ -449,8 +449,8 @@ EsAsignado.motivo|en sustitución de la profesora Elia García de Farache.
 EsAsignado.calificacion|Jefa del Departamento de Biología de Organismos
 ---
 Profesor.Nombre|Prof. Daniuska González
-EsAsignado.fechaAsignacion|31-12-2009
-EsAsignado.fechaFinal|
+EsAsignado.fechaAsignacion|
+EsAsignado.fechaFinal|31-12-2009
 EsAsignado.motivo|
 EsAsignado.calificacion|Coordinadora (Encargada) del Ciclo Profesional de Estudios Generales
 ---
@@ -484,7 +484,7 @@ EsAsignado.fechaFinal|
 EsAsignado.motivo|
 EsAsignado.calificacion|Coordinador de Pre y Postgrado en Ingeniería de Materiales
 ---
-Profesor.Nombre|Raúl Goncalves
+Profesor.Nombre|profesor Raúl Goncalves
 EsAsignado.fechaAsignacion|1-1-2000
 EsAsignado.fechaFinal|
 EsAsignado.motivo|
@@ -649,7 +649,7 @@ EsAsignado.calificacion|Jefa del Departamento de Biblioteca de la Sede del Litor
 Profesor.Nombre|Prof. Eduardo Greaves
 EsAsignado.fechaAsignacion|1-6-2006
 EsAsignado.fechaFinal|
-EsAsignado.motivo|en sustitución del Prof. Celso Luis Ladera.
+EsAsignado.motivo|
 EsAsignado.calificacion|Jefe del Laboratorio “D”
 ---
 Profesor.Nombre|Prof. Patricia Muñoz
