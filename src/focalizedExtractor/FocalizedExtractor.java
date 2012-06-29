@@ -28,9 +28,20 @@ public class FocalizedExtractor {
 	//private List <String> documents; // Los documentos 
 	private List <String> documentFragments;
 	private double minimumHitRadio;
-	public FocalizedExtractor (String configFilePath, 
-							   ExtractionContext eContext
-							   ){
+	
+	public FocalizedExtractor(){
+		
+	}
+	
+	public FocalizedExtractor(String configFilePath, 
+			ExtractionContext eContext, 
+			double minimumHitRadio){
+			initialize(configFilePath);
+			this.minimumHitRadio = minimumHitRadio;
+			this.eContext=eContext;
+	}
+
+	public void initialize (String configFilePath){
 
 		XMLReader xmlReader= new XMLReader(configFilePath);
 		
@@ -47,12 +58,6 @@ public class FocalizedExtractor {
 		
 		minimumHitRadio = xmlReader.getMinimumHitRatio();
 		
-		if (eContext == null){
-			log.log(Level.FATAL, "No se pudo cargar el contexto");
-			return;
-		}
-		
-		this.eContext=eContext;
 		//this.documents = documents;
 		
 		List<String> documents = getDocuments(xmlReader.getDocumentsFilePath());
@@ -75,6 +80,14 @@ public class FocalizedExtractor {
 	}
 	
 		
+	public void initialize (String configFilePath, 
+							ExtractionContext eContext, 
+							double minimumHitRadio){
+		initialize(configFilePath);
+		this.minimumHitRadio = minimumHitRadio;
+		this.eContext=eContext;
+	}
+	
 	private List<String> getDocumentUnits (String regExp, String document){
 
 		ArrayList<String> docUnits = new ArrayList<String>();
@@ -252,6 +265,7 @@ public class FocalizedExtractor {
 			       while ((thisLine = br.readLine()) != null) { 
 			    	   document+=thisLine+ System.getProperty("line.separator");
 			       }  
+			       br.close();
 			   } catch (Exception e) {
 				   log.log(Level.ERROR, "Problem reading file:" +filename + " Error:" + e.getMessage());
 			   }
@@ -266,14 +280,38 @@ public class FocalizedExtractor {
 	}
 	
 	
+	
+	public void setMinimumHitRadio(double minimumHitRadio) {
+		this.minimumHitRadio = minimumHitRadio;
+	}
+
+	public void seteContext(ExtractionContext eContext) {
+		this.eContext = eContext;
+	}
+
 	public static void main(String[] args) {
 		String configFilePath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/extractionConfigFile.xml";
 		
 		TestGenerator testGen = new TestGenerator("/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/testCases");
-		TestSet designacionesTestSet = new TestSet(testGen.getFieldIinfos());
-
+		TestSet designacionesTestSet;
+		
+		
+		designacionesTestSet = new TestSet(testGen.getFieldIinfos(),0);
 		designacionesTestSet.runTest(configFilePath);
-	
+		
+		designacionesTestSet = new TestSet(testGen.getFieldIinfos(),.1);
+		designacionesTestSet.runTest(configFilePath);
+			
+		designacionesTestSet = new TestSet(testGen.getFieldIinfos(),.25);
+		designacionesTestSet.runTest(configFilePath);
+			
+		designacionesTestSet = new TestSet(testGen.getFieldIinfos(),.50);
+		designacionesTestSet.runTest(configFilePath);
+			
+		designacionesTestSet = new TestSet(testGen.getFieldIinfos(),.75);
+		designacionesTestSet.runTest(configFilePath);
+		
+		
 		
 	}
 	

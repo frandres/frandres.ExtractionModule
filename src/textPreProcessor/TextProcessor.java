@@ -9,12 +9,12 @@ public class TextProcessor {
 	 
 	public static void main(String[] args) {
 		
-		 if(args.length < 1) {
-	        	System.out.println("usage: java TextProcessor <files>");
-	        	System.exit(0);
-	        }
-		 
-		 XMLReader xmlReader = new XMLReader(args[0]);		 
+//		 if(args.length < 1) {
+//	        	System.out.println("usage: java TextProcessor <files>");
+//	        	System.exit(0);
+//	        }
+		 String filepath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/Escalafon/preProcessingConfigFile.xml";
+		 XMLReader xmlReader = new XMLReader(filepath);		 
 		 List<FileSource> fSources = xmlReader.getFSources();
 		 
 		 Extractor.processFiles(fSources);

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Filesources>
+
+  <Filesource>
+  		<Name>Escalafon</Name>
+        <InputFilePath>/home/frandres/Eclipse/workspace/ExtractionModule/tests/Escalafon/rawDocuments/</InputFilePath>
+        <OutputFilePath>/home/frandres/Eclipse/workspace/ExtractionModule/tests/Escalafon/preProcessedDocuments/</OutputFilePath>
+        <RegExps>
+            
+
+        	<RegExp>
+        		<Priority>1</Priority>
+        		<String>(contentivos{0,1} de las contrataciones, renovaciones de contratos y ascensos en el escalafón del personal académico señaladas.*Se conoció y aprobó.*asciende a la [cC]ategor[íi]a.*\.)</String>
+        	</RegExp>
+      	
+        </RegExps>
+
+
+        <readAllFiles>1</readAllFiles>
+        <outputExtension>.txt</outputExtension>   
+        
+</Filesource>
+</Filesources>
+<!--
+
+<RegExp>
+        		<Priority>2</Priority>
+        		<String>([Ss]e aprobó el [iI]ngreso al [eE]scalafón.*asciende a la [cC]ategor[íi]a.*\.)</String>
+        	</RegExp>
+        	
+        	<RegExp>
+        		<Priority>1</Priority>
+        		<String>(Informes{0,1} de la Comisión Permanente sobre contrataciones, renovaciones de contratos, ingresos y ascensos al escalafón del personal académico(?:\.|\:|^|$|\s)*Se conoció y aprobó.*asciende a la [cC]ategor[íi]a.*\.)</String>
+        	</RegExp> -->  
