@@ -9,12 +9,27 @@
 
         	<RegExp>
         		<Priority>1</Priority>
-        		<String>(?:Informes{0,1}\s*de\s*la\s*[Cc]omisión\s*[Pp]ermanente\s*sobre\s*[Cc]ontrataciones,\s*[Rr]enovaciones\s*de\s*[Cc]ontratos,\s*[Ii]ngresos\s*(?:y\s*[Aa]scensos{0,1}\s*){0,1}al\s*[Ee]scalafón\s*del\s*[Pp]ersonal\s*[Aa]cadémico.*)*(Informes{0,1}\s*de\s*la\s*[Cc]omisión\s*[Pp]ermanente\s*sobre\s*[Cc]ontrataciones,\s*[Rr]enovaciones\s*de\s*[Cc]ontratos,\s*[Ii]ngresos\s*(?:y\s*[Aa]scensos{0,1}\s*){0,1}al\s*[Ee]scalafón\s*del\s*[Pp]ersonal\s*[Aa]cadémico.*asciende\s*a\s*la\s*[cC]ategor[íi]a.*?[\.\:]).*</String>
+        		<String>(?:Informes{0,1}\s*de\s*la\s*[Cc]omisión\s*[Pp]ermanente\s*sobre\s*[Cc]ontrataciones,\s*[Rr]enovaciones\s*de\s*[Cc]ontratos(?:,|\s*e\s*)\s*[Ii]ngresos\s*(?:y\s*[Aa]scensos{0,1}\s*){0,1}al\s*[Ee]scalafón\s*del\s*[Pp]ersonal\s*[Aa]cadémico.*)*(Informes{0,1}\s*de\s*la\s*[Cc]omisión\s*[Pp]ermanente\s*sobre\s*[Cc]ontrataciones,\s*[Rr]enovaciones\s*de\s*[Cc]ontratos(?:,|\s*e\s*)\s*[Ii]ngresos\s*(?:y\s*[Aa]scensos{0,1}\s*){0,1}al\s*[Ee]scalafón\s*del\s*[Pp]ersonal\s*[Aa]cadémico.*asciende\s*a\s*la\s*[cC]ategor[íi]a.*?[\.\:]).*</String>
         	</RegExp>
       	
 			<RegExp>
         		<Priority>2</Priority>
-        		<String>(?:Informes{0,1}\s*de\s*la\s*[Cc]omisión\s*[Pp]ermanente\s*sobre\s*[Cc]ontrataciones,\s*[Rr]enovaciones\s*de\s*[Cc]ontratos,\s*[Ii]ngresos\s*(?:y\s*[Aa]scensos{0,1}\s*){0,1}al\s*[Ee]scalafón\s*del\s*[Pp]ersonal\s*[Aa]cadémico.*)*(Informes{0,1}\s*de\s*la\s*[Cc]omisión\s*[Pp]ermanente\s*sobre\s*[Cc]ontrataciones,\s*[Rr]enovaciones\s*de\s*[Cc]ontratos,\s*[Ii]ngresos\s*(?:y\s*[Aa]scensos{0,1}\s*){0,1}al\s*[Ee]scalafón\s*del\s*[Pp]ersonal\s*[Aa]cadémico.*?)(?:(?:[Ss]olicitud(?:es){0,1}\s*de\s*[Ee]quivalencias{0,1})|(?:[Ss]olicitudes\s*de\s*[Pp]ermiso)|(?:Cc]omisi[oó]n\s*de\s*[Ll]icitacion(?:es){0,1})|(?:Informe\s*de\s*la\s*Comisión\s*de\s*Año\s*Sabático)|(?:[Pp]rograma\s*de\s*[Dd]esarrollo\s*[Pp]rofesoral)|(?:[Ii]nforme\s*de\s*la\s*[Cc]omisión\s*de\s*[Dd]esarrollo\s*[Pp]rofesoral)|(?:[Ss]olicitud(?:es){0,1}\s*de\s*[Rr]econsideración\s*de\s*[Ee]quivalencias{0,1})|(?:[Cc]asos{0,1}\s*[Rr]elativos{0,1}\s*a\s*año\s*[Ss]abático)|(?:Solicitud(?:es){0,1}\s*de\s*[Rr]eingresos{0,1})).*</String>
+        		<String>(?:Informes{0,1}\s*de\s*la\s*[Cc]omisión\s*[Pp]ermanente\s*sobre\s*[Cc]ontrataciones,\s*[Rr]enovaciones\s*de\s*[Cc]ontratos(?:,|\s*e\s*)\s*[Ii]ngresos\s*(?:y\s*[Aa]scensos{0,1}\s*){0,1}al\s*[Ee]scalafón\s*del\s*[Pp]ersonal\s*[Aa]cadémico.*)*(Informes{0,1}\s*de\s*la\s*[Cc]omisión\s*[Pp]ermanente\s*sobre\s*[Cc]ontrataciones,\s*[Rr]enovaciones\s*de\s*[Cc]ontratos(?:,|\s*e\s*)\s*[Ii]ngresos\s*(?:y\s*[Aa]scensos{0,1}\s*){0,1}al\s*[Ee]scalafón\s*del\s*[Pp]ersonal\s*[Aa]cadémico.*?)(?:(?:[Ss]olicitud(?:es){0,1}\s*de\s*[Ee]quivalencias{0,1})|(?:[Ss]olicitud(?:es){0,1}\s*de\s*[Pp]ermiso)|(?:Cc]omisi[oó]n\s*de\s*[Ll]icitacion(?:es){0,1})|(?:Informe\s*de\s*la\s*Comisión\s*de\s*Año\s*Sabático)|(?:[Pp]rograma\s*de\s*[Dd]esarrollo\s*[Pp]rofesoral)|(?:[Ii]nforme\s*de\s*la\s*[Cc]omisión\s*de\s*[Dd]esarrollo\s*[Pp]rofesoral)|(?:[Ss]olicitud(?:es){0,1}\s*de\s*[Rr]econsideración\s*de\s*[Ee]quivalencias{0,1})|(?:[Cc]asos{0,1}\s*[Rr]elativos{0,1}\s*a\s*año\s*[Ss]abático)|(?:[Ss]olicitud(?:es){0,1}\s*de\s*[Rr]eingresos{0,1})|(?:[Ii]nforme\s*de\s*[Aa]ctividad(?:es){0,1}\s*[Rr]ealizadas{0,1}\s*[Dd]urante\s*[Aa]ños*[Ss]abático)|(?:[Ii]nforme\s*[Dd]e\s*[Ll]a\s*[Cc]omisión\s*[dD]el\s*[Bb]ono\s*[Dd]e\s*[Rr]endimiento\s*[Aa]cadémico)|(?:[Pp]roceso\s*[Dd]e\s*[Rr]eingeniería\:\s*[Ii]nforme\s*[Dd]e\s*[Aa]vance)|(?:Comisi[óo]n(?:es){0,1}\s*de\s*[Ll]icitaci[óo]n(?:es){0,1})).*</String>
+        	</RegExp>
+        	
+      		<RegExp>
+        		<Priority>3</Priority>
+        		<String>(?:[Vv]eredictos{0,1}\s*[Ss]obre\s*[Tt]rabajos{0,1}\s*de\s*[Aa]scensos{0,1}.*)*([Vv]eredictos{0,1}\s*[Ss]obre\s*[Tt]rabajos{0,1}\s*de\s*[Aa]scensos{0,1}.*?)(?:(?:[Ss]olicitud(?:es){0,1}\s*de\s*[Ee]quivalencias{0,1})|(?:[Ss]olicitud(?:es){0,1}\s*de\s*[Pp]ermiso)|(?:Cc]omisi[oó]n\s*de\s*[Ll]icitacion(?:es){0,1})|(?:Informe\s*de\s*la\s*Comisión\s*de\s*Año\s*Sabático)|(?:[Pp]rograma\s*de\s*[Dd]esarrollo\s*[Pp]rofesoral)|(?:[Ii]nforme\s*de\s*la\s*[Cc]omisión\s*de\s*[Dd]esarrollo\s*[Pp]rofesoral)|(?:[Ss]olicitud(?:es){0,1}\s*de\s*[Rr]econsideración\s*de\s*[Ee]quivalencias{0,1})|(?:[Cc]asos{0,1}\s*[Rr]elativos{0,1}\s*a\s*año\s*[Ss]abático)|(?:[Ss]olicitud(?:es){0,1}\s*de\s*[Rr]eingresos{0,1})|(?:[Ii]nforme\s*de\s*[Aa]ctividad(?:es){0,1}\s*[Rr]ealizadas{0,1}\s*[Dd]urante\s*[Aa]ños*[Ss]abático)).*</String>
+        	</RegExp>
+        	
+        	<RegExp>
+        		<Priority>4</Priority>
+        		<String>(?:[Vv]eredictos{0,1}\s*[Ss]obre\s*[Tt]rabajos{0,1}\s*de\s*[Aa]scensos{0,1}.*)*([Vv]eredictos{0,1}\s*[Ss]obre\s*[Tt]rabajos{0,1}\s*de\s*[Aa]scensos{0,1}.*a\s*los\s*fines\s*de\s*su\s*[Aa]sc{0,1}enso\s*a\s*la\s*categoría.*?[\.\:]).*</String>
+        	</RegExp>
+
+			<RegExp>
+        		<Priority>5</Priority>
+        		<String>(?:Informes{0,1}\s*de\s*la\s*[Cc]omisión\s*[Pp]ermanente\s*sobre\s*[Cc]ontrataciones,\s*[Rr]enovaciones\s*de\s*[Cc]ontratos(?:,|\s*e\s*)\s*[Ii]ngresos\s*(?:y\s*[Aa]scensos{0,1}\s*){0,1}al\s*[Ee]scalafón\s*del\s*[Pp]ersonal\s*[Aa]cadémico.*)*(Informes{0,1}\s*de\s*la\s*[Cc]omisión\s*[Pp]ermanente\s*sobre\s*[Cc]ontrataciones,\s*[Rr]enovaciones\s*de\s*[Cc]ontratos(?:,|\s*e\s*)\s*[Ii]ngresos\s*(?:y\s*[Aa]scensos{0,1}\s*){0,1}al\s*[Ee]scalafón\s*del\s*[Pp]ersonal\s*[Aa]cadémico.*?)(?:[abcde]\.\s*Informe).*</String>
         	</RegExp>
         	
         </RegExps>
