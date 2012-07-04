@@ -22,41 +22,32 @@ public class WordReader {
 	 */
 	public static String getTextContent (String filename){
 		
-		InputStream input = null;
+		String textContent= null;
 		
 		try {
-			input = new FileInputStream(new File(filename));
-		} catch (FileNotFoundException e) {
-			log.log(Level.INFO,"Problem finding the file: " + filename);
-			return null;
+				
+			InputStream input = new FileInputStream(new File(filename));
+			
+			if (filename.matches(".*docx")){
+				XWPFWordExtractor extractor = new XWPFWordExtractor(new XWPFDocument(input));
+				input.close();
+				
+			
+				textContent = extractor.getText();
+				
+			} else{
+				WordExtractor extractor = new WordExtractor(input);
+				input.close();
+
+
+				textContent = extractor.getText();
+			}
+		
+		} catch (Exception e) {
+			log.log(Level.ERROR,"Problem reading the file" + filename + ". Error: " + e.getMessage());
 		}
 		
-
-		if (filename.matches(".*docx")){
-			XWPFWordExtractor extractor = null;
-			
-			try {
-				extractor = new XWPFWordExtractor(new XWPFDocument(input));
-				input.close();
-			} catch (IOException e) {
-				log.log(Level.WARN,"Problem reading the file" + filename + ". Error: " + e.getMessage());
-				return null;
-			}
-			
-			return extractor.getText();
-			
-		} else{
-			WordExtractor extractor =null;
-			try {
-				extractor = new WordExtractor(input);
-				input.close();
-			} catch (IOException e) {
-				log.log(Level.WARN,"Problem reading the file" + filename + ". Error: " + e.getMessage());
-				return null;
-			}
-			
-			return extractor.getText();
-		}
+		return textContent;
 		
 	}
 }

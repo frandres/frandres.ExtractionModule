@@ -8,7 +8,7 @@
         <RegExps>
             <RegExp>
         		<Priority>1</Priority>
-        		<String>.*De acuerdo al numeral 7 del artículo 16(.*?)[^0-9 ][23(?:IV)(?:III)(?:II)][\.\t].*</String>
+        		<String>De acuerdo al numeral 7 del artículo 16(.*?)[^0-9 ][23(?:IV)(?:III)(?:II)][\.\t].*</String>
         	</RegExp>
         	<RegExp>
         		<Priority>2</Priority>

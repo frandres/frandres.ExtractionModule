@@ -106,14 +106,16 @@ public class Extractor {
 				int total = 0;
 				
 				out.write(" Using regexp: " + regularExpression  + System.getProperty("line.separator") );
+				
 				for (Iterator<FileInformation> fileInformationIterator = files.iterator(); fileInformationIterator.hasNext();) {
 					FileInformation file = fileInformationIterator.next();
 					System.out.println(total);
 					String text = null;
+
 					if (file.getInputFilename().matches(".*docx{0,1}")){
 						text = WordReader.getTextContent(fileSource.getInputFilepath().concat(file.getInputFilename()));
 					}
-					
+								
 					if (file.getInputFilename().matches(".*html{0,1}")){
 						text = HTMLReader.getTextContent(fileSource.getInputFilepath().concat(file.getInputFilename()));
 					}
@@ -132,9 +134,11 @@ public class Extractor {
 						out.write ("  " + file.getInputFilename() + ": no match found." + System.getProperty("line.separator") );
 						filesWithoutMatch.add(file);
 					}
+					
+			
 					total++;
 				}
-				
+
 				out.write("Matches: " + match + " total: " + total + System.getProperty("line.separator"));
 				files = filesWithoutMatch;
 				filesWithoutMatch = new ArrayList<FileInformation>();

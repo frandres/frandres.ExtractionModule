@@ -13,7 +13,7 @@ public class TextProcessor {
 //	        	System.out.println("usage: java TextProcessor <files>");
 //	        	System.exit(0);
 //	        }
-		 String filepath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/Escalafon/preProcessingConfigFile.xml";
+		 String filepath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/JuradosAscenso/preProcessingConfigFile.xml";
 		 XMLReader xmlReader = new XMLReader(filepath);		 
 		 List<FileSource> fSources = xmlReader.getFSources();
 		 

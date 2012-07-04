@@ -1,7 +1,6 @@
 Extraction report
- Using regexp: .*De acuerdo al numeral 7 del artículo 16(.*?)[^0-9 ][23(?:IV)(?:III)(?:II)][\.\t].*
-  .~lock.D07-12.doc#: no match found.
-  .~lock.D09-5.doc#: no match found.
+ Using regexp: De acuerdo al numeral 7 del artículo 16(.*?)[^0-9 ][23(?:IV)(?:III)(?:II)][\.\t].*
+  .~lock.2002-01.docx#: no match found.
   2002-01.docx: no match found.
   2002-02.docx: no match found.
   2002-03.docx: no match found.
@@ -221,10 +220,9 @@ Extraction report
   D2003-5.doc: no match found.
   D2003-7.doc: no match found.
   D2003-8.doc: no match found.
-Matches: 41 total: 221
+Matches: 41 total: 220
  Using regexp: .*(?:[Ii][Nn][Ff][Oo][Rr][Mm][Ee] [Dd][Ee][Ll] [Rr][Ee][Cc][Tt][Oo][Rr]).*?([Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][Oo\u00f3][Nn](?:[Ee][Ss]){0,1}.*?)[^0-9 ][23(?:IV)(?:III)(?:II)][\.\t].*
-  .~lock.D07-12.doc#: no match found.
-  .~lock.D09-5.doc#: no match found.
+  .~lock.2002-01.docx#: no match found.
   2002-01.docx: 
   2002-02.docx: 
   2002-03.docx: 
@@ -403,4 +401,4 @@ Matches: 41 total: 221
   D2003-5.doc: 
   D2003-7.doc: 
   D2003-8.doc: 
-Matches: 178 total: 180
+Matches: 178 total: 179
