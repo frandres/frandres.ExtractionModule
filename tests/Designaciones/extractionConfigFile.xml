@@ -1,5 +1,9 @@
 <Configuration>
-	<UnitRegExp>^(.+?)$</UnitRegExp>
+
+	<UnitRegExps>
+		<UnitRegExp priority="1" >^(.+?)$</UnitRegExp>
+	</UnitRegExps>
+	
 	<MinimumHitRatio>.5</MinimumHitRatio>
 	<DocumentsFilePath>/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/preProcessedDocuments/</DocumentsFilePath>
 	<FieldDescriptors>

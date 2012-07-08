@@ -14,11 +14,6 @@ import java.util.regex.Pattern;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-import auxiliary.TestGenerator;
-import auxiliary.TestSet;
-
-import textPreProcessor.files.FileInformation;
-
 public class FocalizedExtractor {
 	
 	static Logger log = Logger.getLogger(FocalizedExtractor.class.getName());
@@ -52,7 +47,7 @@ public class FocalizedExtractor {
 		
 		// Read the RegExp describing each unit.
 		
-		String unitRegExp = xmlReader.getUnitRegExp();
+		List<String> unitRegExp = xmlReader.getUnitRegExps();
 		
 		// Read the minimumHitRatio
 		
@@ -88,10 +83,21 @@ public class FocalizedExtractor {
 		this.eContext=eContext;
 	}
 	
-	private List<String> getDocumentUnits (String regExp, String document){
+	private List<String> getDocumentUnits (List<String> regExps, String document){
 
 		ArrayList<String> docUnits = new ArrayList<String>();
 		
+		for (Iterator <String> iterator = regExps.iterator(); iterator.hasNext();) {
+			String regExp = iterator.next();
+			docUnits.addAll(getDocumentUnit(regExp,document));
+			
+		}
+		
+		return docUnits;
+	}
+	
+	private List<String> getDocumentUnit (String regExp, String document){
+		ArrayList<String> docUnits = new ArrayList<String>();
 		Pattern pattern = Pattern.compile(
 	               regExp,
 	                Pattern.MULTILINE
@@ -288,33 +294,5 @@ public class FocalizedExtractor {
 	public void seteContext(ExtractionContext eContext) {
 		this.eContext = eContext;
 	}
-
-	public static void main(String[] args) {
-		String configFilePath = "/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/extractionConfigFile.xml";
-		
-		TestGenerator testGen = new TestGenerator("/home/frandres/Eclipse/workspace/ExtractionModule/tests/Designaciones/testCases");
-		TestSet designacionesTestSet;
-		
-		
-		designacionesTestSet = new TestSet(testGen.getFieldIinfos(),0);
-		designacionesTestSet.runTest(configFilePath);
-		
-		designacionesTestSet = new TestSet(testGen.getFieldIinfos(),.1);
-		designacionesTestSet.runTest(configFilePath);
-			
-		designacionesTestSet = new TestSet(testGen.getFieldIinfos(),.25);
-		designacionesTestSet.runTest(configFilePath);
-			
-		designacionesTestSet = new TestSet(testGen.getFieldIinfos(),.50);
-		designacionesTestSet.runTest(configFilePath);
-			
-		designacionesTestSet = new TestSet(testGen.getFieldIinfos(),.75);
-		designacionesTestSet.runTest(configFilePath);
-		
-		
-		
-	}
-	
-	
 	
 }

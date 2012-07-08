@@ -16,8 +16,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import textPreProcessor.files.FileInformation;
-
 public class XMLReader {
 
 	//No generics
@@ -115,33 +113,9 @@ public class XMLReader {
 	}
 	
 	private List<String> getSpecificRegExps (Element filSEl){
-		//SpecificRegExp
-		
-		PriorityQueue<RegExpWithPriority> pQueue = new PriorityQueue<RegExpWithPriority>();
-		
-		List<String> regExps = new ArrayList<String>();
-		
-		//get a nodelist of <employee> elements\
-		
-		NodeList nl = filSEl.getElementsByTagName("SpecificRegExp");
-		
-		if(nl != null && nl.getLength() > 0) {
-			for(int i = 0 ; i < nl.getLength();i++) {
-				//get the employee element
-				Element el = (Element)nl.item(i);
-
-				//add it to list
-				pQueue.add(new RegExpWithPriority(Double.parseDouble(el.getAttribute("priority")),
-												  el.getTextContent()));
-			}
-		}
-		
-		while (!pQueue.isEmpty()){
-			regExps.add(pQueue.poll().getRegExp());
-			
-		}
-		return regExps;
+		return getRegExpWithPriority(filSEl, "SpecificRegExp");		
 	}
+	
 	/**
 	 * I take a xml element and the tag name, look for the tag and get
 	 * the text content 
@@ -163,12 +137,42 @@ public class XMLReader {
 		return textVal;
 	}
 
-	public String getUnitRegExp() {
-		Element docEle = dom.getDocumentElement();
+//	public List<String> getUnitRegExps() {
+//		Element docEle = dom.getDocumentElement();
+//
+//		return getTextValue(docEle,"UnitRegExp");
+//	}
+	private List<String> getRegExpWithPriority(Element filSEl, String name){
 
-		return getTextValue(docEle,"UnitRegExp");
+		PriorityQueue<RegExpWithPriority> pQueue = new PriorityQueue<RegExpWithPriority>();
+		
+		List<String> regExps = new ArrayList<String>();
+		
+		//get a nodelist of <employee> elements\
+		
+		NodeList nl = filSEl.getElementsByTagName(name);
+		
+		if(nl != null && nl.getLength() > 0) {
+			for(int i = 0 ; i < nl.getLength();i++) {
+				//get the employee element
+				Element el = (Element)nl.item(i);
+
+				//add it to list
+				pQueue.add(new RegExpWithPriority(Double.parseDouble(el.getAttribute("priority")),
+												  el.getTextContent()));
+			}
+		}
+		
+		while (!pQueue.isEmpty()){
+			regExps.add(pQueue.poll().getRegExp());
+			
+		}
+		return regExps;
 	}
-
+	public List<String> getUnitRegExps(){
+		return getRegExpWithPriority(dom.getDocumentElement(), "UnitRegExp");
+		
+	}
 	public double getMinimumHitRatio() {
 		Element docEle = dom.getDocumentElement();
 		return Double.parseDouble(getTextValue(docEle,"MinimumHitRatio"));

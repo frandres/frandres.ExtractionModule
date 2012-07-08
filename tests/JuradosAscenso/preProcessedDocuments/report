@@ -1,8 +1,5 @@
 Extraction report
- Using regexp: (?:(?:[Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][OoÓó][Nn](?:[Ee][Ss]){0,1}{0,1} *\s* *[Dd][Ee] *\s* *){0,1}[Jj][Uu][Rr][Aa][Dd][Oo][Ss]{0,1} *\s* *(?:(?:[Pp][Aa][Rr][Aa])|(?:[Dd][Ee])){0,1} *\s* *(?:[Tt][Rr][Aa][Bb][Aa][Jj][Oo][Ss]{0,1}){0,1} *\s* *[Dd][Ee] *\s* *[Aa][Ss][Cc][Ee][Nn][Ss][Oo][Ss]{0,1}.*)*((?:[Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][OoÓó][Nn](?:[Ee][Ss]){0,1}{0,1} *\s* *[Dd][Ee] *\s* *){0,1}[Jj][Uu][Rr][Aa][Dd][Oo][Ss]{0,1} *\s* *(?:(?:[Pp][Aa][Rr][Aa])|(?:[Dd][Ee])){0,1} *\s* *(?:[Tt][Rr][Aa][Bb][Aa][Jj][Oo][Ss]{0,1}){0,1} *\s* *[Dd][Ee] *\s* *[Aa][Ss][Cc][Ee][Nn][Ss][Oo][Ss]{0,1}.*?Con base (?:(?:a)|(?:en)) las{0,1} propuestas{0,1} presentada.*?)(?:(?:\W[IXV\.\:]*)|(?:\W[abcd\.\:]*)) *\s* *(?:(?:[Ss][Oo][Ll][Ii][Cc][Ii][Tt][Uu][Dd](?:[Ee][Ss]){0,1})|(?:[Ii][Nn][Ff][Oo][Rr][Mm][Ee][Ss]{0,1})|(?:[Ee][Qq][Uu][Ii][Vv][Aa][Ll][Ee][Nn][Cc][Ii][Aa])|(?:[Pp][Uu][Nn][Tt][Oo][Ss]{0,1}))
-  .~lock.2002-15.docx#: no match found.
-  .~lock.A 2011-09.doc#: no match found.
-  .~lock.Acta A01-5.doc#: no match found.
+ Using regexp: (Informe)
   2002-01.docx: 
   2002-03.docx: 
   2002-04.docx: 
@@ -18,12 +15,12 @@ Extraction report
   2002-14.docx: 
   2002-15.docx: 
   2002-16.docx: 
-  A 2011-01.doc: no match found.
+  A 2011-01.doc: 
   A 2011-02.doc: 
   A 2011-03.doc: 
   A 2011-04.doc: 
   A 2011-05.doc: 
-  A 2011-08.doc: no match found.
+  A 2011-08.doc: 
   A 2011-10.doc: 
   A 2011-11.doc: 
   A 2011-12.doc: 
@@ -44,7 +41,7 @@ Extraction report
   A06-12.doc: 
   A06-13.doc: 
   A06-14.doc: 
-  A06-15.doc: no match found.
+  A06-15.doc: 
   A06-16.doc: 
   A06-17.doc: 
   A06-18.doc: 
@@ -99,7 +96,7 @@ Extraction report
   A2010-18.doc: 
   A2010-2.doc: 
   A2010-20.doc: 
-  A2010-21.doc: no match found.
+  A2010-21.doc: 
   A2010-3.doc: 
   A2010-4.doc: 
   A2010-5.doc: 
@@ -129,7 +126,7 @@ Extraction report
   Acta A01-16.doc: 
   Acta A01-17.doc: 
   Acta A01-18.doc: 
-  Acta A01-2.doc: no match found.
+  Acta A01-2.doc: 
   Acta A01-3.doc: 
   Acta A01-4.doc: 
   Acta A01-5.doc: 
@@ -149,24 +146,4 @@ Extraction report
   Acta A04-5.doc: 
   Acta A04-7.doc: 
   Acta A04-8.doc: 
-Matches: 141 total: 149
- Using regexp: (?:(?:[Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][OoÓó][Nn](?:[Ee][Ss]){0,1}{0,1} *\s* *[Dd][Ee] *\s* *){0,1}[Jj][Uu][Rr][Aa][Dd][Oo][Ss]{0,1} *\s* *(?:(?:[Pp][Aa][Rr][Aa])|(?:[Dd][Ee])){0,1} *\s* *(?:[Tt][Rr][Aa][Bb][Aa][Jj][Oo][Ss]{0,1}){0,1} *\s* *[Dd][Ee] *\s* *[Aa][Ss][Cc][Ee][Nn][Ss][Oo][Ss]{0,1}.*)*((?:[Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][OoÓó][Nn](?:[Ee][Ss]){0,1}{0,1} *\s* *[Dd][Ee] *\s* *){0,1}[Jj][Uu][Rr][Aa][Dd][Oo][Ss]{0,1} *\s* *(?:(?:[Pp][Aa][Rr][Aa])|(?:[Dd][Ee])){0,1} *\s* *(?:[Tt][Rr][Aa][Bb][Aa][Jj][Oo][Ss]{0,1}){0,1} *\s* *[Dd][Ee] *\s* *[Aa][Ss][Cc][Ee][Nn][Ss][Oo][Ss]{0,1}.*?)(?:(?:\W[IXV\.\:]*)|(?:\W[abcd\.\:]*)) *\s* *(?:(?:[Ss][Oo][Ll][Ii][Cc][Ii][Tt][Uu][Dd](?:[Ee][Ss]){0,1})|(?:[Ii][Nn][Ff][Oo][Rr][Mm][Ee][Ss]{0,1})|(?:[Ee][Qq][Uu][Ii][Vv][Aa][Ll][Ee][Nn][Cc][Ii][Aa])|(?:[Pp][Uu][Nn][Tt][Oo][Ss]{0,1}))
-  .~lock.2002-15.docx#: no match found.
-  .~lock.A 2011-09.doc#: no match found.
-  .~lock.Acta A01-5.doc#: no match found.
-  A 2011-01.doc: 
-  A 2011-08.doc: 
-  A06-15.doc: 
-  A2010-21.doc: 
-  Acta A01-2.doc: 
-Matches: 5 total: 8
- Using regexp: (?:(?:[Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][OoÓó][Nn](?:[Ee][Ss]){0,1}{0,1} *\s* *[Dd][Ee] *\s* *){0,1}[Jj][Uu][Rr][Aa][Dd][Oo][Ss]{0,1} *\s* *(?:(?:[Pp][Aa][Rr][Aa])|(?:[Dd][Ee])){0,1} *\s* *(?:[Tt][Rr][Aa][Bb][Aa][Jj][Oo][Ss]{0,1}){0,1} *\s* *[Dd][Ee] *\s* *[Aa][Ss][Cc][Ee][Nn][Ss][Oo][Ss]{0,1}.*)*((?:[Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][OoÓó][Nn](?:[Ee][Ss]){0,1}{0,1} *\s* *[Dd][Ee] *\s* *){0,1}[Jj][Uu][Rr][Aa][Dd][Oo][Ss]{0,1} *\s* *(?:(?:[Pp][Aa][Rr][Aa])|(?:[Dd][Ee])){0,1} *\s* *(?:[Tt][Rr][Aa][Bb][Aa][Jj][Oo][Ss]{0,1}){0,1} *\s* *[Dd][Ee] *\s* *[Aa][Ss][Cc][Ee][Nn][Ss][Oo][Ss]{0,1}.*?Con base (?:(?:a)|(?:en)) las{0,1} propuestas{0,1} presentada.*?)(?:(?:\W[IXV\.\:]+)|(?:\W[abcd\.\:]+)) *\s* *(?:(?:[Ss][Oo][Ll][Ii][Cc][Ii][Tt][Uu][Dd](?:[Ee][Ss]){0,1})|(?:[Ii][Nn][Ff][Oo][Rr][Mm][Ee][Ss]{0,1})|(?:[Pp][Rr][Oo][Pp][Uu][Ee][Ss][Tt][Aa])|(?:[Pp][Rr][Oo][Yy][Ee][Cc][Tt][Oo])||(?:[Ee][Qq][Uu][Ii][Vv][Aa][Ll][Ee][Nn][Cc][Ii][Aa])|(?:[Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][ÓóOo][Nn](?:[Ee][Ss]){0,1})|(?:[Pp][Uu][Nn][Tt][Oo][Ss]{0,1}))
-  .~lock.2002-15.docx#: no match found.
-  .~lock.A 2011-09.doc#: no match found.
-  .~lock.Acta A01-5.doc#: no match found.
-Matches: 0 total: 3
- Using regexp: (?:(?:[Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][OoÓó][Nn](?:[Ee][Ss]){0,1}{0,1} *\s* *[Dd][Ee] *\s* *){0,1}[Jj][Uu][Rr][Aa][Dd][Oo][Ss]{0,1} *\s* *(?:(?:[Pp][Aa][Rr][Aa])|(?:[Dd][Ee])){0,1} *\s* *(?:[Tt][Rr][Aa][Bb][Aa][Jj][Oo][Ss]{0,1}){0,1} *\s* *[Dd][Ee] *\s* *[Aa][Ss][Cc][Ee][Nn][Ss][Oo][Ss]{0,1}.*)*((?:[Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][OoÓó][Nn](?:[Ee][Ss]){0,1}{0,1} *\s* *[Dd][Ee] *\s* *){0,1}[Jj][Uu][Rr][Aa][Dd][Oo][Ss]{0,1} *\s* *(?:(?:[Pp][Aa][Rr][Aa])|(?:[Dd][Ee])){0,1} *\s* *(?:[Tt][Rr][Aa][Bb][Aa][Jj][Oo][Ss]{0,1}){0,1} *\s* *[Dd][Ee] *\s* *[Aa][Ss][Cc][Ee][Nn][Ss][Oo][Ss]{0,1}.*?)(?:(?:\W[IXV\.\:]+)|(?:\W[abcd\.\:]+)) *\s* *(?:(?:[Ss][Oo][Ll][Ii][Cc][Ii][Tt][Uu][Dd](?:[Ee][Ss]){0,1})|(?:[Ii][Nn][Ff][Oo][Rr][Mm][Ee][Ss]{0,1})|(?:[Pp][Rr][Oo][Pp][Uu][Ee][Ss][Tt][Aa])|(?:[Pp][Rr][Oo][Yy][Ee][Cc][Tt][Oo])||(?:[Ee][Qq][Uu][Ii][Vv][Aa][Ll][Ee][Nn][Cc][Ii][Aa])|(?:[Dd][Ee][Ss][Ii][Gg][Nn][Aa][Cc][Ii][ÓóOo][Nn](?:[Ee][Ss]){0,1})|(?:[Pp][Uu][Nn][Tt][Oo][Ss]{0,1}))
-  .~lock.2002-15.docx#: no match found.
-  .~lock.A 2011-09.doc#: no match found.
-  .~lock.Acta A01-5.doc#: no match found.
-Matches: 0 total: 3
+Matches: 146 total: 146

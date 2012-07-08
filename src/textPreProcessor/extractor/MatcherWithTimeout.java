@@ -21,18 +21,18 @@ public class MatcherWithTimeout extends Thread {
 		// TODO Auto-generated method stub
 		super.run();
 		
+		result = "";
 		
 		Matcher matcher = pattern.matcher(input);
-		if(!matcher.find()){
-			return;
-		} else {
-			try{
-				result = matcher.group(1);
-			}catch (IllegalStateException e) {
-				return;
+		try{
+			while(matcher.find()){				
+				result +=System.getProperty("line.separator") + matcher.group(1);
 			}
-			
 		}
+		catch (IllegalStateException e) {
+			return;		
+		}
+		
 	}
 
 	protected String getResult() {

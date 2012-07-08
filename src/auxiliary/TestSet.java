@@ -103,7 +103,7 @@ public class TestSet {
 		FocalizedExtractor fExt = new FocalizedExtractor();
 		fExt.initialize(configFilePath);
 		
-		for (double minimumHitMeasure = 0.5; minimumHitMeasure <= 1; minimumHitMeasure+=.25) {
+		for (double minimumHitMeasure = 1; minimumHitMeasure >= .33; minimumHitMeasure-=.33) {
 			fExt.setMinimumHitRadio(minimumHitMeasure);
 			System.out.println("MINIMUM HIT MEASURE: " + minimumHitMeasure);
 			for (int testCaseNum = 0; testCaseNum < getNumTests(); testCaseNum++) {

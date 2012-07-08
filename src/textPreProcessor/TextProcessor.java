@@ -17,7 +17,9 @@ public class TextProcessor {
 		 XMLReader xmlReader = new XMLReader(filepath);		 
 		 List<FileSource> fSources = xmlReader.getFSources();
 		 
-		 Extractor.processFiles(fSources);
+		 Extractor ext = new Extractor();
+		 
+		 ext.processFiles(fSources);
 		 
 	}
 }

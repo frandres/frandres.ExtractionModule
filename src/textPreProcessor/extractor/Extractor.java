@@ -19,8 +19,13 @@ import textPreProcessor.timeout.TimeoutException;
 
 public class Extractor {
 
-	private static final int timeout = 8000;
+	private List<String> createdFiles;
 	
+	public Extractor (){
+		createdFiles = new ArrayList<String>();
+	}
+	private static final int timeout = 8000;
+	private static final String separator = System.getProperty("line.separator")+ System.getProperty("line.separator")+ "--------------------------------" + System.getProperty("line.separator")+System.getProperty("line.separator"); 
 	static Logger log = Logger.getLogger(Extractor.class.getName());
 	/*
 	 * Looks in file for the regular expression specified in pattern and writes
@@ -32,7 +37,7 @@ public class Extractor {
 	 * 
 	 * Return a boolean that specifies if a match was found or not. 
 	 */
-	public static boolean processFile(String iFile, String oFileName,String regExp){
+	public boolean processFile(String iFile, String oFileName,String regExp){
 		 
 		
 		boolean foundMatch = true;
@@ -64,9 +69,10 @@ public class Extractor {
 		
 		try{
 			  // Create file 
-			  FileWriter fstream = new FileWriter(oFileName);
+			
+			  FileWriter fstream = new FileWriter(oFileName,fileAlreadyCreated(oFileName));
 			  BufferedWriter out = new BufferedWriter(fstream);
-			  out.write(result);
+			  out.write(result+separator);
 			  //Close the output stream
 			  out.close();
 		}catch (Exception e){//Catch exception if any
@@ -75,13 +81,35 @@ public class Extractor {
 		}
 		return foundMatch;
 	}
-	
+	/*
+	 * Revisa si ya se ha creado un archivo con el nombre oFileName.
+	 * 
+	 * El objetivo de esto es que se pueda extraer más de un fragmento por cada documento
+	 * y guardar todos estos documentos en un mismo archivo de salida:
+	 * 
+	 * Si ya se creo el archivo, se escribe como append. 
+	 * 
+	 * ATENCION: Esta llamada tiene efectos de borde (modifica la lista de archivos creados).
+	 */
+	private boolean fileAlreadyCreated(String oFileName) {
+		
+		for (Iterator<String> iterator = createdFiles.iterator(); iterator.hasNext();) {
+			String fileName = iterator.next();
+			if (oFileName.compareTo(fileName)==0){
+				return true;
+			}
+		}
+		
+		createdFiles.add(oFileName);
+		return false;
+	}
+
 	/*
 	 * Iterates through a list of file to process each file.
 	 * 
 	 * files: List of files 
 	 */
-	public static void processFiles(List<FileSource> fileSources){
+	public void processFiles(List<FileSource> fileSources){
 		for (Iterator <FileSource> iterator = fileSources.iterator(); iterator.hasNext();) {
 			FileSource fileSource = iterator.next();
 			List<FileInformation> files = fileSource.getFiles();
