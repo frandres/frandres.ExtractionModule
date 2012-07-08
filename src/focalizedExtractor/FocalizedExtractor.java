@@ -221,6 +221,8 @@ public class FocalizedExtractor {
 		
 		if (maxHitMeasure!= 0){
 			weight = hitMeasure/maxHitMeasure;
+		} else{
+			weight =0;
 		}
 		
 		//log.log(Level.INFO, "Unit: " + unit + " has weight: " + weight);
