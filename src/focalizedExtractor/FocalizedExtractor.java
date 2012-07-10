@@ -141,6 +141,9 @@ public class FocalizedExtractor {
 	
 		String fieldValue;
 		
+		if (pQueue.isEmpty()){
+			log.log(Level.INFO, "No unit found.");
+		}
 		while (!pQueue.isEmpty()){
 			UnitHit uHit = pQueue.poll();
 			unit = uHit.getUnit();

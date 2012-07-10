@@ -88,7 +88,7 @@ public class TestSet {
 	}
 
 
-	public void runTest(String configFilePath, int numField) {
+	public void runTest(String configFilePath, int numField, double [] minimumHitMeasures) {
 		double  results[][] = new double[getNumFields()][4];
 		
 		for (int i = 0; i < getNumFields(); i++) {
@@ -103,7 +103,8 @@ public class TestSet {
 		FocalizedExtractor fExt = new FocalizedExtractor();
 		fExt.initialize(configFilePath);
 		
-		for (double minimumHitMeasure = 1; minimumHitMeasure >= .33; minimumHitMeasure-=.33) {
+		for (int dummy = 0; dummy < minimumHitMeasures.length; dummy++) {
+			double minimumHitMeasure = minimumHitMeasures[dummy];
 			fExt.setMinimumHitRadio(minimumHitMeasure);
 			System.out.println("MINIMUM HIT MEASURE: " + minimumHitMeasure);
 			for (int testCaseNum = 0; testCaseNum < getNumTests(); testCaseNum++) {
@@ -122,22 +123,28 @@ public class TestSet {
 					break;
 				
 				case INCOMPLETE:
-					log.log(Level.INFO,"Prueba número: " + testCaseNum + " incompleta: " + getMissingFieldName(testCaseNum));			
+					log.log(Level.INFO,"Prueba número: " + testCaseNum + " incompleta: " + getMissingFieldName(testCaseNum));
+					log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
+					log.log(Level.INFO,"Resultado obtenido:" + result);
 					break;
 								
 				case INCORRECT:
 					log.log(Level.INFO,"Prueba número: " + testCaseNum + " incorrecta: " + getMissingFieldName(testCaseNum));
+					log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
+					log.log(Level.INFO,"Resultado obtenido:" + result);
 					break;
 				case EXCESS:
 					log.log(Level.INFO,"Prueba número: " + testCaseNum + " excess: " + getMissingFieldName(testCaseNum));
+					log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
+					log.log(Level.INFO,"Resultado obtenido:" + result);
 					break;
 					
 				default:
 					break;
 				}
-				log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
-				log.log(Level.INFO,"Resultado obtenido:" + result);
-				//System.out.println("");
+//				log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
+//				log.log(Level.INFO,"Resultado obtenido:" + result);
+				System.out.println("");
 				
 				results[testCaseNum%getNumFields()][resultEvaluation]++;
 							
@@ -222,21 +229,22 @@ public class TestSet {
 			return CORRECT;
 		}
 		
-		if (answer.contains(correct)){
+		if (correct.contains(answer)){
 			// ATENCION: EL ORDEN DE ESTOS IFS AFECTA CONSIDERABLEMENTE.
 			return INCOMPLETE;
 		}
 		
-		if (correct.contains(answer)){
+		if (answer.contains(correct)){
 			// ATENCION: EL ORDEN DE ESTOS IFS AFECTA CONSIDERABLEMENTE.
 			return EXCESS;
 		}
+	
 		
 		return INCORRECT;
 		
 	}
-	public void runTest(String configFilePath) {
-		runTest (configFilePath,-1);
+	public void runTest(String configFilePath, double [] minimumHitMeasures) {
+		runTest (configFilePath,-1,minimumHitMeasures);
 		
 	}
 	
