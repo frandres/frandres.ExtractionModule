@@ -105,7 +105,7 @@ public class FocalizedExtractor {
 
 		Matcher matcher = pattern.matcher(document);
 
-		String unit;
+		String unit = null;
 
 		while (matcher.find()){
 
@@ -290,7 +290,9 @@ public class FocalizedExtractor {
 		
 	}
 	
-	
+	public List<String> getDocumentFragments() {
+		return documentFragments;
+	}
 	
 	public void setMinimumHitRadio(double minimumHitRadio) {
 		this.minimumHitRadio = minimumHitRadio;

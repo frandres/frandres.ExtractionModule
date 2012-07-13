@@ -1,9 +1,15 @@
 package auxiliary;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -11,6 +17,7 @@ import org.apache.log4j.Logger;
 import focalizedExtractor.ExtractionContext;
 import focalizedExtractor.FieldInformation;
 import focalizedExtractor.FocalizedExtractor;
+import focalizedExtractor.XMLReader;
 
 public class TestSet {
 	static Logger log = Logger.getLogger(TestSet.class.getName());
@@ -88,6 +95,7 @@ public class TestSet {
 	}
 
 
+	
 	public void runTest(String configFilePath, int numField, double [] minimumHitMeasures) {
 		double  results[][] = new double[getNumFields()][4];
 		
@@ -246,6 +254,22 @@ public class TestSet {
 	public void runTest(String configFilePath, double [] minimumHitMeasures) {
 		runTest (configFilePath,-1,minimumHitMeasures);
 		
+	}
+
+
+	public void getUnits(String configFilePath) {
+		
+		FocalizedExtractor fExt = new FocalizedExtractor();
+		fExt.initialize(configFilePath);
+		List<String> docUnits = fExt.getDocumentFragments();
+
+		for (Iterator iterator = docUnits.iterator(); iterator.hasNext();) {
+			String string = (String) iterator.next();
+			System.out.println(string);
+			System.out.println("&&&&&&&&&&&&");
+		}
+		
+		System.out.println("Cases: " + docUnits.size());
 	}
 	
 }
