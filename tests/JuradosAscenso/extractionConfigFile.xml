@@ -93,7 +93,8 @@
 		<FieldDescriptor>
 			<FieldName>Jurado.SuplenteInterno</FieldName>
 			<SpecificRegExps>
-				<SpecificRegExp priority="1" >((?:[Tt][Ii][Tt][Uu][Ll][Aa][Rr])|(?:[Aa][Gg][Rr][Ee][Gg][Aa][Dd][Oo])|(?:[Aa][Ss][Oo][Cc][Ii][Aa][Dd][Oo]))</SpecificRegExp>
+				<SpecificRegExp priority="1" >(?:(?:[Pp][Rr][Oo][Ff][Ee][Ss][Oo][Rr][Aa]{0,1})|(?:[Pp][Rr][Oo][Ff][Aa]{0,1}\.)|(?:[Dd][Oo][Cc][Tt][Oo][Rr][Aa]{0,1})|(?:[Dd][Rr][Aa]{0,1}\.)) *\s* *([\w'’´áéíóúÁÉÍÓÚüñÑÜ][\w'’´áéíóú'’´ÁÉÍÓÚüñÑÜ \t \-\.]+?) *\s* *(?:\({0,1}(?:[Mm][Ii][Ee][Mm][Bb][Rr][Oo]){0,1} *\s* *[Ss][Uu][Pp][Ll][Ee][Nn][Tt][Ee] *\s* *[Ii][Nn][Tt][Ee][Rr][Nn][Oo]\){0,1})</SpecificRegExp>
+				<SpecificRegExp priority="2" >(?:(?:\({0,1}(?:[Mm][Ii][Ee][Mm][Bb][Rr][Oo]){0,1} *\s* *[Pp][Rr][Ii][Nn][Cc][Ii][Pp][Aa][Ll] *\s* *(?:[Ee][Xx][Tt][Ee][Rr][Nn][Oo])){0,1})\){0,1},{0,1}(?:(?: *\s* *y *\s* *)|(?:$^)){0,1} *\s* *([\w'’´áéíóúÁÉÍÓÚüñÑÜ][\w'’´áéíóú'’´ÁÉÍÓÚüñÑÜ \t \-\.]+?) *\s* *(?:\({0,1}(?:[Mm][Ii][Ee][Mm][Bb][Rr][Oo]){0,1} *\s* *[Ss][Uu][Pp][Ll][Ee][Nn][Tt][Ee] *\s* *[Ii][Nn][Tt][Ee][Rr][Nn][Oo]\){0,1})</SpecificRegExp>
 			</SpecificRegExps>
 			<Weight>1</Weight>
 			<isDate>0</isDate>
@@ -102,7 +103,9 @@
 		<FieldDescriptor>
 			<FieldName>Jurado.SuplenteExterno</FieldName>
 			<SpecificRegExps>
-				<SpecificRegExp priority="1" >((?:[Tt][Ii][Tt][Uu][Ll][Aa][Rr])|(?:[Aa][Gg][Rr][Ee][Gg][Aa][Dd][Oo])|(?:[Aa][Ss][Oo][Cc][Ii][Aa][Dd][Oo]))</SpecificRegExp>
+				<SpecificRegExp priority="2" >(?:(?:[Pp][Rr][Oo][Ff][Ee][Ss][Oo][Rr][Aa]{0,1})|(?:[Pp][Rr][Oo][Ff][Aa]{0,1}\.)|(?:[Dd][Oo][Cc][Tt][Oo][Rr][Aa]{0,1})|(?:[Dd][Rr][Aa]{0,1}\.)) *\s* *([\w'’´áéíóúÁÉÍÓÚüñÑÜ][\w'’´áéíóú'’´ÁÉÍÓÚüñÑÜ \t \-\.]+?) *\s* *(?:\({0,1}(?:[Mm][Ii][Ee][Mm][Bb][Rr][Oo]){0,1} *\s* *[Ss][Uu][Pp][Ll][Ee][Nn][Tt][Ee] *\s* *[Ee][Xx][Tt][Ee][Rr][Nn][Oo]\){0,1})</SpecificRegExp>
+				<SpecificRegExp priority="3" >(?:(?:\({0,1}(?:[Mm][Ii][Ee][Mm][Bb][Rr][Oo]){0,1} *\s* *[Ss][Uu][Pp][Ll][Ee][Nn][Tt][Ee] *\s* *[Ii][Nn][Tt][Ee][Rr][Nn][Oo]))\){0,1},{0,1}(?:(?: *\s* *y *\s* *)|(?:$^)){0,1} *\s* *([\w'’´áéíóúÁÉÍÓÚüñÑÜ][\w'’´áéíóú'’´ÁÉÍÓÚüñÑÜ \t \-\.]+?) *\s* *(?:\({0,1}(?:[Mm][Ii][Ee][Mm][Bb][Rr][Oo]){0,1} *\s* *[Ss][Uu][Pp][Ll][Ee][Nn][Tt][Ee] *\s* *[Ee][Xx][Tt][Ee][Rr][Nn][Oo]\){0,1})</SpecificRegExp>
+				<SpecificRegExp priority="1" >(?:(?:\({0,1}(?:[Mm][Ii][Ee][Mm][Bb][Rr][Oo]){0,1} *\s* *[Ss][Uu][Pp][Ll][Ee][Nn][Tt][Ee] *\s* *[Dd][Ee])).*?(?:$^)* *\s* *(?:(?:[Pp][Rr][Oo][Ff][Ee][Ss][Oo][Rr][Aa]{0,1})|(?:[Pp][Rr][Oo][Ff][Aa]{0,1}\.)|(?:[Dd][Oo][Cc][Tt][Oo][Rr][Aa]{0,1})|(?:[Dd][Rr][Aa]{0,1}\.)) *\s* *([\w'’´áéíóúÁÉÍÓÚüñÑÜ][\w'’´áéíóú'’´ÁÉÍÓÚüñÑÜ \t \-\.]+?) *\s* *(?:\({0,1}(?:[Mm][Ii][Ee][Mm][Bb][Rr][Oo]){0,1} *\s* *[Ss][Uu][Pp][Ll][Ee][Nn][Tt][Ee] *\s* *[Dd][Ee]\){0,1})</SpecificRegExp>
 			</SpecificRegExps>
 			<Weight>1</Weight>
 			<isDate>0</isDate>
