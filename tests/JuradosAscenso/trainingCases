@@ -278,19 +278,9 @@ Jurado.MiembroPrincipalExterno|Carmen León
 Jurado.SuplenteInterno|Lydia Pujol
 Jurado.SuplenteExterno|Belkis Marcano
 ---
-Profesor.Nombre|
-Profesor.Departamento|
-Trabajo.Nombre|
-Trabajo.Escalafon|
-Jurado.Presidente|
-Jurado.MiembroPrincipalInterno|
-Jurado.MiembroPrincipalExterno|
-Jurado.SuplenteInterno|
-Jurado.SuplenteExterno|
----
-Profesor.Nombre|MODELAJE DE LA TRANSFERENCIA DE CALOR EN TURBINAS RADIALES
+Profesor.Nombre|NATHALY MORENO
 Profesor.Departamento|Departamento de Conversión y Transporte de Energía
-Trabajo.Nombre|NATHALY MORENO
+Trabajo.Nombre|MODELAJE DE LA TRANSFERENCIA DE CALOR EN TURBINAS RADIALES
 Trabajo.Escalafon|AGREGADO
 Jurado.Presidente|Pedro Pieretti
 Jurado.MiembroPrincipalInterno|Euro Casanova
@@ -341,7 +331,7 @@ Jurado.SuplenteExterno|Sary Levy
 Profesor.Nombre|LUIS URBANO
 Profesor.Departamento|Departamento de Electrónica y Circuitos
 Trabajo.Nombre|CONTRIBUCIÓN A LA DOCENCIA, INVESTIGACIÓN Y EXTENSIÓN EN MIS ACTIVIDADES COMO PROFESOR
-Trabajo.Escalafon|
+Trabajo.Escalafon|TITULAR
 Jurado.Presidente|María C. Stefanelli
 Jurado.MiembroPrincipalInterno|Aura López
 Jurado.MiembroPrincipalExterno|Rubén Medina
@@ -350,23 +340,13 @@ Jurado.SuplenteExterno|Vincenzo Mendillo
 ---
 Profesor.Nombre|DOUGLAS MUNDARAIN
 Profesor.Departamento|Departamento de Física
-Trabajo.Nombre|EFECTO DE ZENON, ESPACIOS LIBRES DE DECOHERENCIA Y DISCRIMINACIÓN DE MEDIDAS CUÁNTICA
+Trabajo.Nombre|EFECTO DE ZENON, ESPACIOS LIBRES DE DECOHERENCIA Y DISCRIMINACIÓN DE MEDIDAS CUÁNTICAS
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Cayetano Di Bartolo
 Jurado.MiembroPrincipalInterno|Alvaro Restucia
 Jurado.MiembroPrincipalExterno|Lorenzo Leal
 Jurado.SuplenteInterno|Rita Gianvittorio
 Jurado.SuplenteExterno|Ernesto Medina
----
-Profesor.Nombre|
-Profesor.Departamento|
-Trabajo.Nombre|
-Trabajo.Escalafon|
-Jurado.Presidente|
-Jurado.MiembroPrincipalInterno|
-Jurado.MiembroPrincipalExterno|
-Jurado.SuplenteInterno|
-Jurado.SuplenteExterno|
 ---
 Profesor.Nombre|LUISA ANGELICA DELGADO
 Profesor.Departamento|Departamento de Procesos y Sistemas
@@ -548,16 +528,6 @@ Jurado.MiembroPrincipalExterno|
 Jurado.SuplenteInterno|Alejandro Teruel Levitsky
 Jurado.SuplenteExterno|
 ---
-Profesor.Nombre|
-Profesor.Departamento|
-Trabajo.Nombre|
-Trabajo.Escalafon|
-Jurado.Presidente|
-Jurado.MiembroPrincipalInterno|
-Jurado.MiembroPrincipalExterno|
-Jurado.SuplenteInterno|
-Jurado.SuplenteExterno|
----
 Profesor.Nombre|ORLANDO JOSÉ SUCRE ROSALES
 Profesor.Departamento|Departamento de Electrónica y Circuitos
 Trabajo.Nombre|APORTES AL CONOCIMIENTO DE LOS CAMPOS ELECTROMAGNÉTICOS
@@ -566,16 +536,6 @@ Jurado.Presidente|Pablo Martín De Julián
 Jurado.MiembroPrincipalInterno|Luis Loreto Rodríguez y Wilmer Ramón González Valerio
 Jurado.MiembroPrincipalExterno|
 Jurado.SuplenteInterno|Trina Adrián de Pérez
-Jurado.SuplenteExterno|
----
-Profesor.Nombre|
-Profesor.Departamento|
-Trabajo.Nombre|
-Trabajo.Escalafon|
-Jurado.Presidente|
-Jurado.MiembroPrincipalInterno|
-Jurado.MiembroPrincipalExterno|
-Jurado.SuplenteInterno|
 Jurado.SuplenteExterno|
 ---
 Profesor.Nombre|ALBA ROSA HERNÁNDEZ BOSSIO
@@ -627,17 +587,6 @@ Jurado.MiembroPrincipalInterno|Emilio Fernando Hernández González y Francisca 
 Jurado.MiembroPrincipalExterno|
 Jurado.SuplenteInterno|Emely Arraiz Bilbao
 Jurado.SuplenteExterno|
----
-Profesor.Nombre|
-Profesor.Departamento|
-Trabajo.Nombre|
-Trabajo.Escalafon|
-Jurado.Presidente|
-Jurado.MiembroPrincipalInterno|
-Jurado.MiembroPrincipalExterno|
-Jurado.SuplenteInterno|
-Jurado.SuplenteExterno|
----
 Profesor.Nombre|RENNY ELIAS BADRA BADRA
 Profesor.Departamento|Departamento de Electrónica y Circuitos
 Trabajo.Nombre|DISEÑO Y CARACTERIZACIÓN DE UN SISTEMA ASIMÉTRICO PARA RADIO DIGITAL DE ALTA VELOCIDAD
@@ -728,9 +677,9 @@ Jurado.MiembroPrincipalExterno|
 Jurado.SuplenteInterno|Antonieta Taddei
 Jurado.SuplenteExterno|
 ---
-Profesor.Nombre|PROBLEMAS EN COMBINATORIA ADITIVA Y UNA NOTA EN TEORÍA DE GRAFOS ESPECTRAL
+Profesor.Nombre|DOMINGO ALBERTO QUIROZ RODRÍGUEZ
 Profesor.Departamento|Departamento de Matemáticas Puras y Aplicadas
-Trabajo.Nombre|DOMINGO ALBERTO QUIROZ RODRÍGUEZ
+Trabajo.Nombre|PROBLEMAS EN COMBINATORIA ADITIVA Y UNA NOTA EN TEORÍA DE GRAFOS ESPECTRAL
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Pedro Berrizbeitia
 Jurado.MiembroPrincipalInterno|María Rosa Brito
@@ -941,7 +890,7 @@ Jurado.SuplenteExterno|Antonio Millán
 Profesor.Nombre|JESUS DE ANDRADE
 Profesor.Departamento|departamento de Conversión y Transporte de Energía
 Trabajo.Nombre|APLICACIÓN DE TÉCNICAS DFC EN EL MANEJO DE MEZCLAS BIFÁSICAS PARA LA CONVERSIÓN Y TRANSPORTE DE ENERGÍA
-Trabajo.Escalafon|
+Trabajo.Escalafon|AGREGADO
 Jurado.Presidente|Luis Rojas
 Jurado.MiembroPrincipalInterno|Euro Casanova
 Jurado.MiembroPrincipalExterno|Ricardo Noguera
@@ -968,11 +917,11 @@ Jurado.MiembroPrincipalExterno|
 Jurado.SuplenteInterno|Alfredo Del Monaco
 Jurado.SuplenteExterno|
 ---
-Profesor.Nombre|Gianfranco Passariello
+Profesor.Nombre|Rosana Esteller Rangel
 Profesor.Departamento|
 Trabajo.Nombre|DETECCIÓN DEL INICIO DEL ATAQUE EPILÉPTICO POR MEDIO DE SEÑALES DE EEG INTRACRANEALES
 Trabajo.Escalafon|ASOCIADO
-Jurado.Presidente|Rosana Esteller Rangel
+Jurado.Presidente|Gianfranco Passariello
 Jurado.MiembroPrincipalInterno|Pedro Gomis
 Jurado.MiembroPrincipalExterno|Diego Jugo
 Jurado.SuplenteInterno|Trina Adrián
@@ -1047,16 +996,6 @@ Jurado.MiembroPrincipalInterno|Gloria Buendía
 Jurado.MiembroPrincipalExterno|Anwar Hasmy
 Jurado.SuplenteInterno|Orlando Rivas
 Jurado.SuplenteExterno|Juan Murgich
----
-Profesor.Nombre|
-Profesor.Departamento|
-Trabajo.Nombre|
-Trabajo.Escalafon|
-Jurado.Presidente|
-Jurado.MiembroPrincipalInterno|
-Jurado.MiembroPrincipalExterno|
-Jurado.SuplenteInterno|
-Jurado.SuplenteExterno|
 ---
 Profesor.Nombre|SILVIA SIQUIER
 Profesor.Departamento|Departamento de Termodinámica y Fenómenos de Transferencia
