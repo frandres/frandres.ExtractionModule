@@ -212,11 +212,11 @@ Profesor.Nombre|JEANETTE GONZÁLEZ
 Profesor.Departamento|Departamento de Mecánica
 Trabajo.Nombre|MODIFICACIÓN DE POLIOLEFINAS MEDIANTE LA ADICIÓN DE CARGAS Y POR RADIACIÓN GAMMA
 Trabajo.Escalafon|TITULAR
-Jurado.Presidente|Prof. Carmen Rosales
-Jurado.MiembroPrincipalInterno|Prof. Leni Márquez
-Jurado.MiembroPrincipalExterno|Prof. Francisco López
-Jurado.SuplenteInterno|Prof. José Luis Feijoo
-Jurado.SuplenteExterno|Prof. Tamara Rajmankina
+Jurado.Presidente|Carmen Rosales
+Jurado.MiembroPrincipalInterno|Leni Márquez
+Jurado.MiembroPrincipalExterno|Francisco López
+Jurado.SuplenteInterno|José Luis Feijoo
+Jurado.SuplenteExterno|Tamara Rajmankina
 ---
 Profesor.Nombre|ZAIRA REVERÓN
 Profesor.Departamento|Departamento de Ciencias Sociales
@@ -303,8 +303,8 @@ Profesor.Departamento|Departamento de Ciencias Sociales y Humanidades
 Trabajo.Nombre|Ejercicios espirituales, obra para coro mixto y orquesta sinfónica compuesta por Diana Arismendi
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Abraham Abreu
-Jurado.MiembroPrincipalInterno|María Antonia Palacios
-Jurado.MiembroPrincipalExterno|Inocente Carreño
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|María Antonia Palacios y Inocente Carreño
 Jurado.SuplenteInterno|Marisela González
 Jurado.SuplenteExterno|Alfredo del Mónaco
 ---
@@ -414,8 +414,8 @@ Trabajo.Nombre|ESTRUCTURA LOCAL Y RESOLUCION DE ECUACIONES GENERALIZADAS
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Alfonso Reinoza
 Jurado.MiembroPrincipalInterno|Carmen Arévalo y Marcos Raydan
-Jurado.MiembroPrincipalExterno|Marianela Lentini
-Jurado.SuplenteInterno|
+Jurado.MiembroPrincipalExterno|
+Jurado.SuplenteInterno|Marianela Lentini
 Jurado.SuplenteExterno|
 ---
 Profesor.Nombre|ROSANA ESTELLER RANGEL
@@ -433,7 +433,7 @@ Profesor.Departamento|Departamento de Tecnología Industrial
 Trabajo.Nombre|ANALISIS BIOMECANICO DE LA VARIABILIDAD DEL PATRON VENTILATORIO
 Trabajo.Escalafon|AGREGADO
 Jurado.Presidente|Pedro Gomis
-Jurado.MiembroPrincipalInterno|Jesús Silva y Antonio D’Alexandro
+Jurado.MiembroPrincipalInterno|Pedro Gomis y Antonio D’Alexandro
 Jurado.MiembroPrincipalExterno|
 Jurado.SuplenteInterno|Luis Sabater
 Jurado.SuplenteExterno|
@@ -692,8 +692,8 @@ Profesor.Departamento|Departamento de Biología de Organismos
 Trabajo.Nombre|DE LA BIOLOGÍA REPRODUCTIVA DE PLANTAS SILVESTRES A LA INTERPRETACIÓN AMBIENTAL COMO PRÁCTICA EDUCATIVA PARA LA ENSEÑANZA DE LA BIOLOGÍA
 Trabajo.Escalafon|ASOCIADO
 Jurado.Presidente|Zdravko Baruch
-Jurado.MiembroPrincipalInterno|Jafet Nassar
-Jurado.MiembroPrincipalExterno|Jesús Aranguren
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Jafet Nassar y Jesús Aranguren
 Jurado.SuplenteInterno|Rosa Reyes
 Jurado.SuplenteExterno|Damelis Jáuregui
 ---
@@ -792,8 +792,8 @@ Profesor.Departamento|Departamento de Estudios Ambientales
 Trabajo.Nombre|CONSERVACIÓN DE LA BIODIVERSIDAD MARINA EN VENEZUELA: UN ENFOQUE SISTÉMICO PARA LA SELECCIÓN DE ÁREAS PRIORITARIAS PARA SU CONSERVACIÓN EN EL MARCO DE LA EXPLOTACIÓN DE HIDROCARBUROS COSTA AFUERA
 Trabajo.Escalafon|ASOCIADO
 Jurado.Presidente|Marisol Aguilera
-Jurado.MiembroPrincipalInterno|Antonio Machado
-Jurado.MiembroPrincipalExterno|César Lodeiros
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Antonio Machado y César Lodeiros
 Jurado.SuplenteInterno|Elia García
 Jurado.SuplenteExterno|Jon Paúl Rodríguez
 ---
@@ -842,8 +842,8 @@ Profesor.Departamento|departamento de Computo Científico y Estadística
 Trabajo.Nombre|MODELAJE DE QUIMIOTERAPIAS CON DROGAS CITOTÓXICAS Y CITO-ESTÁTICAS
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Blai Bonet
-Jurado.MiembroPrincipalInterno|Henryk Gzyl
-Jurado.MiembroPrincipalExterno|Miguel Herreros
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Miguel Herreros y Henryk Gzyl
 Jurado.SuplenteInterno|René Escalante
 Jurado.SuplenteExterno|John Mc. Call
 ---
@@ -852,8 +852,8 @@ Profesor.Departamento|departamento de Química
 Trabajo.Nombre|ELECTRODOS QUIMICAMENTE MODIFICADOS CON CARACTERISTICAS ÚTILES EN EL DESARROLLO DE SENSORES ELECTROQUÍMICOS
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Roberto Requiz
-Jurado.MiembroPrincipalInterno|Gilberto Jorge
-Jurado.MiembroPrincipalExterno|Olga Márquez
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Olga Márquez y Gilberto Jorge
 Jurado.SuplenteInterno|Lorenzo Echeverría
 Jurado.SuplenteExterno|Matilde Fernández
 ---
@@ -918,7 +918,7 @@ Jurado.SuplenteInterno|Alfredo Del Monaco
 Jurado.SuplenteExterno|
 ---
 Profesor.Nombre|Rosana Esteller Rangel
-Profesor.Departamento|
+Profesor.Departamento|Departamento de Tecnología Industrial
 Trabajo.Nombre|DETECCIÓN DEL INICIO DEL ATAQUE EPILÉPTICO POR MEDIO DE SEÑALES DE EEG INTRACRANEALES
 Trabajo.Escalafon|ASOCIADO
 Jurado.Presidente|Gianfranco Passariello
