@@ -128,7 +128,7 @@ Jurado.MiembroPrincipalExterno|Eli Saúl Puchi
 Jurado.SuplenteInterno|Milton Manrique
 Jurado.SuplenteExterno|Amado Quintero
 ---
-Profesor.Nombre|Debora Cores Carrerax
+Profesor.Nombre|Debora Cores Carrera
 Profesor.Departamento|Departamento de Cómputo Científico y Estadística
 Trabajo.Nombre|ESQUEMAS NUMÉRICOS DE OPTIMIZACIÓN DE BAJO COSTO COMPUTACIONAL PARA TRAZAR RAYOS SÍSMICOS Y ESTIMAR VELOCIDADES SÍSMICAS
 Trabajo.Escalafon|TITULAR
@@ -138,9 +138,9 @@ Jurado.MiembroPrincipalExterno|José Mario Martínez
 Jurado.SuplenteInterno|Marianela Lentini
 Jurado.SuplenteExterno|Brígida Molina
 ---
-Profesor.Nombre|Hussein M. Khodradscrito
+Profesor.Nombre|Hussein M. Khodr
 Profesor.Departamento|Departamento de Conversión y Transporte de Energía
-Trabajo.Nombre|ÉCNICAS DE PLANIFICACIÓN Y ANÁLISIS DE REDES DE DISTRIBUCIÓN DE ENERGÍA ELÉCTRICA
+Trabajo.Nombre|TÉCNICAS DE PLANIFICACIÓN Y ANÁLISIS DE REDES DE DISTRIBUCIÓN DE ENERGÍA ELÉCTRICA
 Trabajo.Escalafon|ASOCIADO
 Jurado.Presidente|Ramón Villasana
 Jurado.MiembroPrincipalInterno|Ubaldo García Palomares
@@ -175,7 +175,7 @@ Trabajo.Escalafon|TITULAR
 Jurado.Presidente|María Dolores Morán
 Jurado.MiembroPrincipalInterno|Álvaro Restuccia
 Jurado.MiembroPrincipalExterno|Alfonso Castro
-Jurado.SuplenteInterno|Gerardo Cámer
+Jurado.SuplenteInterno|Gerardo Cámera
 Jurado.SuplenteExterno|Hugo Antonio Leiva
 ---
 Profesor.Nombre|HAYDÉE LUGO
@@ -423,9 +423,9 @@ Profesor.Departamento|Departamento de Computación y Tecnología de la Informaci
 Trabajo.Nombre|ANÁLISIS, MODELAJE Y PROCESAMIENTO DE SEÑALES: APLICACIONES BIOMÉDICAS
 Trabajo.Escalafon|ASOCIADO
 Jurado.Presidente|Gianfranco Pasarriello
-Jurado.MiembroPrincipalInterno|Blai Bonet
-Jurado.MiembroPrincipalExterno|Rubén Medina
-Jurado.SuplenteInterno|Francisco Azuaje
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Francisco Azuaje y Rubén Medina
+Jurado.SuplenteInterno|Blai Bonet
 Jurado.SuplenteExterno|José Paredes
 ---
 Profesor.Nombre|JUAN POSADA
@@ -443,8 +443,8 @@ Profesor.Departamento|departamento de Biología de Organismos
 Trabajo.Nombre|ECOLOGÍA DE ARRECIFES CORALINOS: NUEVAS ENFERMEDADES Y POTENCIAL DE RECUPERACIÓN
 Trabajo.Escalafon|ASOCIADO
 Jurado.Presidente|David Bone
-Jurado.MiembroPrincipalInterno|Jorge Cortéz
-Jurado.MiembroPrincipalExterno|Alina Szmant
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Jorge Cortéz y Alina Szmant
 Jurado.SuplenteInterno|Patricia Miloslavich
 Jurado.SuplenteExterno|Héctor Guzmán
 ---
@@ -600,7 +600,7 @@ Jurado.SuplenteExterno|
 ---
 Profesor.Nombre|OSWALDO R. LARES SOTO
 Profesor.Departamento|Departamento de Diseño, Arquitectura y Artes Plásticas
-Trabajo.Nombre|ARDIN BOTÁNICO DE CARACAS: UNA PROPUESTA PAISAJISTA PARA EL TERCER MILENIO
+Trabajo.Nombre|JARDIN BOTÁNICO DE CARACAS: UNA PROPUESTA PAISAJISTA PARA EL TERCER MILENIO
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Jorge Antonio Negrette Quintero
 Jurado.MiembroPrincipalInterno|Mireya Eulalia Urdaneta Bocanegra y Leandro Aristiguieta
@@ -843,10 +843,10 @@ Profesor.Departamento|Departamento de Biología de Organismos
 Trabajo.Nombre|ESTUDIO DE INSECTOS NEOTROPICALES DE LOS ORDENES ORTHOPTERA E ISOPTERA
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Juan Carlos Navarro
-Jurado.MiembroPrincipalInterno|Patricia Chacón
-Jurado.MiembroPrincipalExterno|Eliana Márques
-Jurado.SuplenteInterno|Jürg Damarmels
-Jurado.SuplenteExterno|Luis José Joly
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Patricia Chacón y Eliana Márques
+Jurado.SuplenteInterno|
+Jurado.SuplenteExterno|Jürg Damarmels y Luis José Joly
 ---
 Profesor.Nombre|MARÍA SILVIA CEMBORAIN
 Profesor.Departamento|Departamento de Diseño, Arquitectura y Artes Plásticas
@@ -863,20 +863,20 @@ Profesor.Departamento|Departamento de Biología Celular
 Trabajo.Nombre|EL MEJORAMIENTO DE LA PRODUCCIÓN AGRÍCOLA: UN PROBLEMA CON MÚLTIPLES ENFOQUES
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Marisol Castrillo
-Jurado.MiembroPrincipalInterno|Eva de García
-Jurado.MiembroPrincipalExterno|María Luisa Izaguirre
-Jurado.SuplenteInterno|Vidal Rodríguez
-Jurado.SuplenteExterno|Antonieta Taddei
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Eva de García y María Luisa Izaguirre
+Jurado.SuplenteInterno|
+Jurado.SuplenteExterno|Vidal Rodríguez y Antonieta Taddei
 ---
 Profesor.Nombre|KAREM NORIS
 Profesor.Departamento|Departamento Biología Celular
 Trabajo.Nombre|TEJIDO ÓSEO: METABOLISMO, CELÚLAS MADRES Y NUEVOS DESARROLLO EN EL ÁREA DE INGENIERÍA DE TEJIDOS
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Cristián Puig
-Jurado.MiembroPrincipalInterno|José Cardier
-Jurado.MiembroPrincipalExterno|Manuel Doblaré
-Jurado.SuplenteInterno|Miguel Cerrolaza
-Jurado.SuplenteExterno|Federico Barceló
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|José Cardier y Manuel Doblaré
+Jurado.SuplenteInterno|
+Jurado.SuplenteExterno|Miguel Cerrolaza y Federico Barceló
 ---
 Profesor.Nombre|JAVIER AOIZ
 Profesor.Departamento|Departamento de Filosofía
@@ -933,10 +933,10 @@ Profesor.Departamento|Departamento de Termodinámica y Fenómenos de Transferenc
 Trabajo.Nombre|APLICACIÓN DE LA ECUACIÓN DE BASE MOLECULAR SPHCT PARA LA PREDICCIÓN DEL EQUILIBRIO DE FASES EN SISTEMAS n-ALCANO-HIDRÓGENO
 Trabajo.Escalafon|ASOCIADO
 Jurado.Presidente|Freddy Malpica
-Jurado.MiembroPrincipalInterno|Darío Viloria
-Jurado.MiembroPrincipalExterno|Beatriz Marrufo
-Jurado.SuplenteInterno|Oswaldo Latif
-Jurado.SuplenteExterno|Trino Romero
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Darío Viloria y Beatriz Marrufo
+Jurado.SuplenteInterno|
+Jurado.SuplenteExterno|Oswaldo Latif
 ---
 Profesor.Nombre|GABRIEL GOMEZ
 Profesor.Departamento|Departamento de Tecnología Industrial
@@ -963,15 +963,15 @@ Profesor.Departamento|departamento de Biología de Organismos
 Trabajo.Nombre|MICROBIOLOGIA ACUÁTICA: DESDE LAS BACTERIAS DE INTERÉS EN SALUD PÚBLICA DEL REFUGIO DE FAUNA CUARE HASTA LOS MICROBIOS DE LA FOSA DE CARIACO
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Antonieta Taddei
-Jurado.MiembroPrincipalInterno|Dianne Newman
-Jurado.MiembroPrincipalExterno|Vidal Rodríguez
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Dianne Newman y Vidal Rodríguez
 Jurado.SuplenteInterno|María A. Santana
 Jurado.SuplenteExterno|Guillermina Alonso
 ---
 Profesor.Nombre|LUISA ANGELUCCI
-Profesor.Departamento|
+Profesor.Departamento|departamento de Ciencia y Tecnología del Comportamiento
 Trabajo.Nombre|EMOCIÓN Y SALUD: UN MODELO CASUAL
-Trabajo.Escalafon|
+Trabajo.Escalafon|ASOCIADO
 Jurado.Presidente|Evelyn Canino
 Jurado.MiembroPrincipalInterno|Leticia Guarino
 Jurado.MiembroPrincipalExterno|Eugenia Csoban
@@ -998,7 +998,7 @@ Jurado.MiembroPrincipalExterno|Álvaro Contreras
 Jurado.SuplenteInterno|Mariana Suárez
 Jurado.SuplenteExterno|Luz Marina Rivas
 ---
-Profesor.Nombre|ASOCIADO
+Profesor.Nombre|LILIAN PINEDA
 Profesor.Departamento|departamento de Formación General y Ciencias Básicas
 Trabajo.Nombre|LAS DIFERENCIAS INDIVIDUALES EN EL PROCESO DE ENSEÑANZA Y APRENDIZAJE DE LA MATEMÁTICA A NIVEL SUPERIOR, UNIVERSIDAD SIMÓN BOLÍVAR, SEDE DEL LITORAL
 Trabajo.Escalafon|ASOCIADO
@@ -1009,7 +1009,7 @@ Jurado.SuplenteInterno|Lilian Pérez Monroy
 Jurado.SuplenteExterno|Walter Beyer
 ---
 Profesor.Nombre|HERMES CARRERO
-Profesor.Departamento|Departamento de Química
+Profesor.Departamento|departamento de Química
 Trabajo.Nombre|DETERMINACIONES VOLTAMÉTRICAS CON ELECTRODOSMODIFICADOS EN MICROEMULSIONES Y SOLUCIÓN ACUOSA
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Alfredo Rosas
@@ -1063,10 +1063,10 @@ Profesor.Departamento|departamento de Química
 Trabajo.Nombre|LÍQUIDOS IÓNICOS FUNCIONALES Y COMPLEJOS ORGANOMETÁLICOS QUIRALES: NUEVAS HERRAMIENTAS PARA LA CONSTRUCCIÓN SELECTIVA DE ENLACES C-C, C-N Y C-O
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Antonio Zapata
-Jurado.MiembroPrincipalInterno|Jartan Dupont
-Jurado.MiembroPrincipalExterno|Roberto Sánchez Delgado
-Jurado.SuplenteInterno|Oswaldo Núñez
-Jurado.SuplenteExterno|Jaime Arce
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Jartan Dupont y Roberto Sánchez Delgado
+Jurado.SuplenteInterno|
+Jurado.SuplenteExterno|Oswaldo Núñez y Jaime Arce
 ---
 Profesor.Nombre|MARCOS SABINO
 Profesor.Departamento|departamento de Química
@@ -1083,8 +1083,8 @@ Profesor.Departamento|departamento de Tecnología de Procesos Biológicos
 Trabajo.Nombre|DISPONIBILIDAD DE MACRO Y MICRONUTRIENTES Y EVALUACIÓN DEL ESTADO NUTRICIONAL EN CONDICIONES DE SALUD O ENFERMEDAD
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Marisa Guerra
-Jurado.MiembroPrincipalInterno|Virgilio Bosch
-Jurado.MiembroPrincipalExterno|María de las Nieves García
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Virgilio Bosch y María de las Nieves García
 Jurado.SuplenteInterno|Marisela Granito
 Jurado.SuplenteExterno|Mercedes Schnell
 ---
@@ -1123,8 +1123,8 @@ Profesor.Departamento|departamento de Química
 Trabajo.Nombre|CONTRIBUCIONES AL ESTUDIO DE LA QUÍMICA ECOLÓGICA
 Trabajo.Escalafon|TITULAR
 Jurado.Presidente|Julio Herrera
-Jurado.MiembroPrincipalInterno|Terezinha Della Lucia
-Jurado.MiembroPrincipalExterno|Joao Batista Fernandes
+Jurado.MiembroPrincipalInterno|
+Jurado.MiembroPrincipalExterno|Terezinha Della Lucia y Joao Batista Fernandes
 Jurado.SuplenteInterno|Alfredo Rosas
 Jurado.SuplenteExterno|María Pía Calcagno
 ---

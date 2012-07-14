@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry excluding="src/" kind="src" path=""/>
+	<classpathentry kind="lib" path="/home/frandres/Eclipse/workspace/ExtractionModule/lib/pdfbox-app-1.6.0.jar"/>
+	<classpathentry kind="lib" path="/home/frandres/Eclipse/workspace/ExtractionModule/lib/tika-app-1.1.jar"/>
+	<classpathentry kind="lib" path="/home/frandres/Eclipse/workspace/ExtractionModule/lib/poi-ooxml-schemas-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="/home/frandres/Eclipse/workspace/ExtractionModule/lib/poi-excelant-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="/home/frandres/Eclipse/workspace/ExtractionModule/lib/poi-ooxml-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="/home/frandres/Eclipse/workspace/ExtractionModule/lib/poi-examples-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="/home/frandres/Eclipse/workspace/ExtractionModule/lib/poi-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="/home/frandres/Eclipse/workspace/ExtractionModule/lib/poi-scratchpad-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="/home/frandres/Eclipse/workspace/ExtractionModule/lib/jericho-html-3.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -152,7 +152,7 @@ public class TestSet {
 				}
 //				log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
 //				log.log(Level.INFO,"Resultado obtenido:" + result);
-				System.out.println("");
+				//System.out.println("");
 				
 				results[testCaseNum%getNumFields()][resultEvaluation]++;
 							
