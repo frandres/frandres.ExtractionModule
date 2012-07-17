@@ -3,6 +3,7 @@ package auxiliary;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -96,12 +97,17 @@ public class TestSet {
 
 
 	
-	public void runTest(String configFilePath, int numField, double [] minimumHitMeasures) {
-		double  results[][] = new double[getNumFields()][4];
+	public double[][][][] runTest(String configFilePath, int numField, double [] minimumHitMeasures,double [] probability) {
+		double  results[][][][] = new double[getNumFields()][NOAPROBADO+1][minimumHitMeasures.length][probability.length];
 		
 		for (int i = 0; i < getNumFields(); i++) {
 			for (int j = 0; j < 4; j++) {
-				results[i][j]=0;
+				for (int k = 0; k < minimumHitMeasures.length; k++) {
+					for (int l = 0; l < probability.length; l++) {
+						results[i][j][k][l]  = 0;
+					
+					}
+				}
 			}
 		}
 		
@@ -110,75 +116,96 @@ public class TestSet {
 		
 		FocalizedExtractor fExt = new FocalizedExtractor();
 		fExt.initialize(configFilePath);
-		
-		for (int dummy = 0; dummy < minimumHitMeasures.length; dummy++) {
-			double minimumHitMeasure = minimumHitMeasures[dummy];
-			fExt.setMinimumHitRadio(minimumHitMeasure);
-			System.out.println("MINIMUM HIT MEASURE: " + minimumHitMeasure);
-			for (int testCaseNum = 0; testCaseNum < getNumTests(); testCaseNum++) {
-				if (testCaseNum%getNumFields()!=numField&&numField>=0){
-					continue;
-				}
-				ExtractionContext extContext = getContext(testCaseNum);
-				fExt.seteContext(extContext);
-				
-				String result = fExt.findFieldValue(getMissingFieldName(testCaseNum));
-				
-				int resultEvaluation = evaluateTest(getCorrectAnswer(testCaseNum),result);
-				switch (resultEvaluation) {
-				case CORRECT:
-					log.log(Level.INFO,"Prueba número: " + testCaseNum + " correcta: " + getMissingFieldName(testCaseNum));
-					break;
-				
-				case INCOMPLETE:
-					log.log(Level.INFO,"Prueba número: " + testCaseNum + " incompleta: " + getMissingFieldName(testCaseNum));
-					log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
-					log.log(Level.INFO,"Resultado obtenido:" + result);
-					break;
-								
-				case INCORRECT:
-					log.log(Level.INFO,"Prueba número: " + testCaseNum + " incorrecta: " + getMissingFieldName(testCaseNum));
-					log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
-					log.log(Level.INFO,"Resultado obtenido:" + result);
-					break;
-				case EXCESS:
-					log.log(Level.INFO,"Prueba número: " + testCaseNum + " excess: " + getMissingFieldName(testCaseNum));
-					log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
-					log.log(Level.INFO,"Resultado obtenido:" + result);
-					break;
+
+	
+
+		for (int probabilityIndex = 0; probabilityIndex < probability.length; probabilityIndex++) {
+			this.probability = probability[probabilityIndex];
+			for (int minimumHitMeasureIndex = 0; minimumHitMeasureIndex < minimumHitMeasures.length; minimumHitMeasureIndex++) {
+				double minimumHitMeasure = minimumHitMeasures[minimumHitMeasureIndex];
+				fExt.setMinimumHitRadio(minimumHitMeasure);
+//				System.out.println("MINIMUM HIT MEASURE: " + minimumHitMeasure);
+				for (int testCaseNum = 0; testCaseNum < getNumTests(); testCaseNum++) {
+					if (testCaseNum%getNumFields()!=numField&&numField>=0){
+						continue;
+					}
+					ExtractionContext extContext = getContext(testCaseNum);
+					fExt.seteContext(extContext);
 					
-				default:
-					break;
+					String result = fExt.findFieldValue(getMissingFieldName(testCaseNum));
+					
+					int resultEvaluation = evaluateTest(getCorrectAnswer(testCaseNum),result);
+					switch (resultEvaluation) {
+					case CORRECT:
+						log.log(Level.INFO,"Prueba número: " + testCaseNum + " correcta: " + getMissingFieldName(testCaseNum));
+						break;
+					
+					case INCOMPLETE:
+						log.log(Level.INFO,"Prueba número: " + testCaseNum + " incompleta: " + getMissingFieldName(testCaseNum));
+						log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
+						log.log(Level.INFO,"Resultado obtenido:" + result);
+						break;
+									
+					case INCORRECT:
+						log.log(Level.INFO,"Prueba número: " + testCaseNum + " incorrecta: " + getMissingFieldName(testCaseNum));
+						log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
+						log.log(Level.INFO,"Resultado obtenido:" + result);
+						break;
+					case EXCESS:
+						log.log(Level.INFO,"Prueba número: " + testCaseNum + " excess: " + getMissingFieldName(testCaseNum));
+						log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
+						log.log(Level.INFO,"Resultado obtenido:" + result);
+						break;
+						
+					default:
+						break;
+					}
+	//				log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
+	//				log.log(Level.INFO,"Resultado obtenido:" + result);
+					//System.out.println("");
+					
+					results[testCaseNum%getNumFields()][resultEvaluation][minimumHitMeasureIndex][probabilityIndex]++;
+								
 				}
-//				log.log(Level.INFO,"Resultado correcto:" + getCorrectAnswer(testCaseNum));
-//				log.log(Level.INFO,"Resultado obtenido:" + result);
-				//System.out.println("");
 				
-				results[testCaseNum%getNumFields()][resultEvaluation]++;
+				for (int i = 0; i<=NOAPROBADO;i++){
+					for (int j = 0; j<getNumFields();j++){
+						if (i==NOAPROBADO || i == APROBADO){
+							results[j][i][minimumHitMeasureIndex][probabilityIndex]= results[j][i-1][minimumHitMeasureIndex][probabilityIndex]+
+																					 results[j][i-2][minimumHitMeasureIndex][probabilityIndex];
+						}
+						else{			
 							
+								results[j][i][minimumHitMeasureIndex][probabilityIndex]= results[j][i][minimumHitMeasureIndex][probabilityIndex]*getNumFields()*100/total;
+						}
+					}
+				}
 			}
-			
-			System.out.println("RESULTS: ");
-		    System.out.println("With probability of: " + probability);
+//			System.out.println("RESULTS: ");
+//		    System.out.println("With probability of: " + probability);
 		    
-		    for (int i = 0; i < getNumFields(); i++) {
-		    	System.out.println("Field: " + getMissingFieldName(i)) ;
-		    	System.out.println(" CORRECTAS: " + results[i][CORRECT]*getNumFields()*100/total);
-		    	System.out.println(" EXCESS: " + results[i][EXCESS]*getNumFields()*100/total);
-		    	System.out.println(" INCOMPLETE: " + results[i][INCOMPLETE]*getNumFields()*100/total);
-		    	System.out.println(" INCORRECT: " + results[i][INCORRECT]*getNumFields()*100/total);
-		    	
-		    	results[i][CORRECT]=0;
-		    	results[i][EXCESS]=0;
-		    	results[i][INCOMPLETE]=0;
-		    	results[i][INCORRECT]=0;
-			}	
-		    System.out.println("");
-		    System.out.println("-----------------------");
-			System.out.println("");
+//		    if (humanReadable){
+//		    
+//			    for (int i = 0; i < getNumFields(); i++) {
+//			    	System.out.println("Field: " + getMissingFieldName(i)) ;
+//			 
+//			    	System.out.println(" CORRECTAS: " + results[i][CORRECT][minimumHitMeasureIndex][probabilityIndex]*getNumFields()*100/total);
+//			    	System.out.println(" EXCESS: " + results[i][EXCESS]*getNumFields()*100/total);
+//			    	System.out.println(" INCOMPLETE: " + results[i][INCOMPLETE]*getNumFields()*100/total);
+//			    	System.out.println(" INCORRECT: " + results[i][INCORRECT]*getNumFields()*100/total);
+//			    	
+//			    	results[i][CORRECT]=0;
+//			    	results[i][EXCESS]=0;
+//			    	results[i][INCOMPLETE]=0;
+//			    	results[i][INCORRECT]=0;
+//				}	
+//			    System.out.println("");
+//			    System.out.println("-----------------------");
+//				System.out.println("");
+//		    }
 		}
 		
-		
+		return results;
 	    
 	}
 	
@@ -194,10 +221,13 @@ public class TestSet {
 		return orig;
 	}
 	
-	private final static int INCORRECT = 3;
-	private final static int INCOMPLETE = 2;
 	private final static int CORRECT = 0;
 	private final static int EXCESS = 1;
+	private final static int APROBADO = 2;
+	private final static int INCORRECT = 3;
+	private final static int INCOMPLETE = 4;
+	private final static int NOAPROBADO = 5;
+	
 	
 	private int evaluateTest(String correct, String answer){
 
@@ -251,8 +281,8 @@ public class TestSet {
 		return INCORRECT;
 		
 	}
-	public void runTest(String configFilePath, double [] minimumHitMeasures) {
-		runTest (configFilePath,-1,minimumHitMeasures);
+	public void runTest(String configFilePath, double [] minimumHitMeasures, double [] probability) {
+		runTest (configFilePath,-1,minimumHitMeasures, probability);
 		
 	}
 
@@ -270,6 +300,65 @@ public class TestSet {
 		}
 		
 		System.out.println("Cases: " + docUnits.size());
+	}
+
+
+	public void printLatexTables(String configFilePath,
+			double[] minimumHitMeasure,
+			double[] probabilities, 
+			String name) {
+		double [][][][] results = runTest (configFilePath,-1,minimumHitMeasure, probabilities);
+		
+		for (int k = 0; k < minimumHitMeasure.length; k++) {
+			
+			System.out.println("\\begin{landscape}");
+			System.out.println("\\begin{table}");
+			System.out.println("\\centering");
+			System.out.println("\\caption{ Resultados de la evaluación del Extractor Focalizado - Dominio: " + name+". UnitHit Measure mínimo:"+ minimumHitMeasure[k]+"}");
+			System.out.println("\\centering");
+			System.out.println("\\scriptsize");
+			System.out.println("\\begin{tabular*}{1\\textwidth}{@{\\extracolsep{\\fill}} !{\\vrule width 1pt} c !{\\vrule width 1pt} c !{\\vrule width 1pt} c | c | c !{\\vrule width 1pt} c | c | c !{\\vrule width 1pt}}");
+			System.out.println("\\hline");
+			System.out.println("Campo & Prob. Campo Faltante & \\multicolumn{3}{c!{\\vrule width 1pt}}{\\bf{P. Aprobadas}} & \\multicolumn{3}{c!{\\vrule width 1pt}}{\\bf{P. No aprobadas}}\\\\");
+			System.out.println("\\hline");
+
+			System.out.println("\\multicolumn{2}{!{\\vrule width 1pt}c|}{ } & Correctos & Con texto de más & Aprobados & Incompletos & Incorrectos & No aprobados\\\\");
+			System.out.println("\\hline");
+			
+			for (int i = 0; i < getNumFields(); i++) {
+				
+				System.out.println("\\multirow{3}{*}{"+ getMissingFieldName(i)+"} ");
+				System.out.println("");
+				for (int l = 0; l < probabilities.length; l++) {
+					
+					System.out.println("\t& " + probabilities[l]);
+					System.out.print("\t");
+					for (int j = 0; j <= NOAPROBADO; j++) {
+						DecimalFormat myFormatter = new DecimalFormat("##.##");
+						if (j== NOAPROBADO || j == APROBADO){
+							System.out.print("& \\bf{" + myFormatter.format(results[i][j][k][l])+ "\\%} ");
+						}else{
+							System.out.print("& " + myFormatter.format(results[i][j][k][l])+ "\\% ");
+						}
+						
+						
+					
+					}
+					System.out.print("\\\\"+System.getProperty("line.separator"));
+					System.out.println("\t\\cline{3-8}");
+					System.out.println("");
+				}
+				
+				System.out.println("\\hline");
+			}
+			
+			System.out.println("\\end{tabular*}");
+			System.out.println("\\label{tabla-resultados-EF" + name + minimumHitMeasure[k]+ "}");
+			System.out.println("\\\\");
+			System.out.println("Prob. Campo Faltante es la probabilidad de que no se tenga el valor uno de los campos que se utilizan para hacer extracción focalizada.");
+			System.out.println("\\end{table}");
+			System.out.println("\\end{landscape}");
+		}
 	}
 	
 }
